@@ -25,7 +25,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/MonoliYoda/pathfinder_esi.git"
+      "url": "https://github.com/BiekerUdan/pathfinder_esi.git"
     }
   ],
   "require": {
@@ -53,7 +53,7 @@
     "react/promise-stream": "1.2.*",
     "clue/ndjson-react": "1.1.*",
     "firebase/php-jwt": "6.*",
-    "monoliyoda/pathfinder_esi": "dev-master as 0.0.x-dev"
+    "biekerudan/pathfinder_esi": "@dev"
   },
   "suggest": {
     "ext-redis": "Redis can be used as cache backend."

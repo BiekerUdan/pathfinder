@@ -62,8 +62,8 @@ class SystemThera extends AbstractRestController {
                 'trueSec' => isset($universeSystemData['trueSec']) ? (float)$universeSystemData['trueSec'] : -1
             ];
         
-            if(!empty($universeSystemData['constellationID'])){
-                $systemData['constellation'] = ['id' => (int)$universeSystemData['constellationID']];
+            if(!empty($universeSystemData['constellationId'])){
+                $systemData['constellation'] = ['id' => (int)$universeSystemData['constellationId']];
             }
             if(!empty($region = (array)$eveScoutSystem['region']) && !empty($region['id'])){
                 $systemData['region'] = ['id' => (int)$region['id'], 'name' => (string)$region['name']];
@@ -90,27 +90,31 @@ class SystemThera extends AbstractRestController {
 
         /**
          * map wormhole data from eveScout to Pathfinder´s connection format
-         * @param array $wormholeData
+         * @param array $eveScoutConnection - full connection data from API
          * @param array $connectionsData
          */
-        $enrichWithWormholeData = function(array $wormholeData, array &$connectionsData) : void {
+        $enrichWithWormholeData = function(array $eveScoutConnection, array &$connectionsData) : void {
             $type = [];
-            if($wormholeData['mass'] === 'reduced'){
-                $type[] = 'wh_reduced';
-            }else if($wormholeData['mass'] === 'critical'){
-                $type[] = 'wh_critical';
-            }else{
-                $type[] = 'wh_fresh';
-            }
 
-            if($wormholeData['eol'] === 'critical'){
+            // Eve-Scout v2 API doesn't provide mass status, default to fresh
+            $type[] = 'wh_fresh';
+
+            // Check EOL based on remaining_hours (EOL if <= 4 hours)
+            $remainingHours = isset($eveScoutConnection['remaining_hours']) ? (int)$eveScoutConnection['remaining_hours'] : 24;
+            if($remainingHours <= 4){
                 $type[] = 'wh_eol';
             }
+
             $connectionsData['type'] = $type;
-            $connectionsData['estimatedEol'] = $wormholeData['estimatedEol'];
+
+            // Set estimated EOL from expires_at
+            if(isset($eveScoutConnection['expires_at'])){
+                $connectionsData['estimatedEol'] = $eveScoutConnection['expires_at'];
+            }
         };
 
         $eveScoutResponse = $this->getF3()->eveScoutClient()->send('getTheraConnections');
+
         if(!empty($eveScoutResponse) && !isset($eveScoutResponse['error'])){
             foreach((array)$eveScoutResponse['connections'] as $eveScoutConnection){
                 if(
@@ -127,7 +131,7 @@ class SystemThera extends AbstractRestController {
                             ],
                             'updated' => (new \DateTime($eveScoutConnection['updated']))->getTimestamp()
                         ];
-                        $enrichWithWormholeData((array)$eveScoutConnection['wormhole'], $data);
+                        $enrichWithWormholeData($eveScoutConnection, $data);
                         $enrichWithSystemData('source', $eveScoutConnection, $data);
                         $enrichWithSystemData('target', $eveScoutConnection, $data);
                         $enrichWithSignatureData('sourceSignature', $eveScoutConnection, $data);

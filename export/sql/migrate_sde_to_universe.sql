@@ -337,7 +337,11 @@ SELECT
     CASE
         WHEN ss.security >= 0.5 THEN \'H\'
         WHEN ss.security > 0.0 THEN \'L\'
-        WHEN ss.security <= 0.0 AND ss.securityClass IS NOT NULL THEN ss.securityClass
+        WHEN mc.regionID = 10000070 THEN \'T\'
+        WHEN mc.regionID >= 11000000 AND mc.regionID < 12000000 AND wh.wormholeClassID BETWEEN 1 AND 6 THEN CONCAT(\'C\', wh.wormholeClassID)
+        WHEN mc.regionID >= 11000000 AND mc.regionID < 12000000 AND wh.wormholeClassID = 12 THEN \'C12\'
+        WHEN mc.regionID >= 11000000 AND mc.regionID < 12000000 AND wh.wormholeClassID = 13 THEN \'C13\'
+        WHEN mc.regionID >= 11000000 AND mc.regionID < 12000000 AND wh.wormholeClassID BETWEEN 14 AND 18 THEN CONCAT(\'C\', wh.wormholeClassID)
         ELSE \'0.0\'
     END,
     ROUND(ss.security, 1),
@@ -348,8 +352,10 @@ SELECT
     COALESCE(CAST(ss.y AS SIGNED), 0),
     COALESCE(CAST(ss.z AS SIGNED), 0)
 FROM ', @sde_db, '.mapSolarSystems ss
+LEFT JOIN ', @sde_db, '.mapConstellations mc ON ss.constellationID = mc.constellationID
 LEFT JOIN (
     SELECT locationID,
+           wormholeClassID,
            CASE wormholeClassID
                WHEN 1 THEN \'magnetar\'
                WHEN 2 THEN \'red_giant\'
@@ -359,7 +365,7 @@ LEFT JOIN (
                WHEN 6 THEN \'black_hole\'
            END as wormholeEffect
     FROM ', @sde_db, '.mapLocationWormholeClasses
-) wh ON ss.solarSystemID = wh.locationID
+) wh ON mc.regionID = wh.locationID
 WHERE ss.solarSystemName IS NOT NULL
 ON DUPLICATE KEY UPDATE
     updated = NOW(),
@@ -553,12 +559,13 @@ SELECT
     md.itemName,
     md.solarSystemID,
     md.typeID,
-    mj.destinationID,
+    dest_gate.solarSystemID,
     COALESCE(CAST(md.x AS SIGNED), 0),
     COALESCE(CAST(md.y AS SIGNED), 0),
     COALESCE(CAST(md.z AS SIGNED), 0)
 FROM ', @sde_db, '.mapDenormalize md
 INNER JOIN ', @sde_db, '.mapJumps mj ON md.itemID = mj.stargateID
+INNER JOIN ', @sde_db, '.mapDenormalize dest_gate ON dest_gate.itemID = mj.destinationID
 WHERE md.groupID = 10 AND md.itemName IS NOT NULL
 ON DUPLICATE KEY UPDATE
     updated = NOW(),

@@ -458,12 +458,11 @@ class Sso extends Api\User{
         // set $leeway in seconds to 10, since sometimes there can be verification errors due server clock skew resulting
         // in tokens that look like they were issued 1 second in the future.
         JWT::$leeway = 10;
-        // map list of algs from CCP JWK 
-        $supportedAlgs = array_column($ccpJwks['keys'], 'alg');
         // get decoded JWT using ccp supplied JWK
-        $decodedJwt = JWT::decode($accessToken, JWK::parseKeySet($ccpJwks), $supportedAlgs);
+        // Note: JWK::parseKeySet() returns Key objects with algorithms already set, so no need for 3rd parameter
+        $decodedJwt = JWT::decode($accessToken, JWK::parseKeySet($ccpJwks));
         // check if issuer matches correct ccp supplied claim values
-        if (strpos($decodedJwt->iss, $this->getSsoJwkClaim()) !== true) {            
+        if (strpos($decodedJwt->iss, $this->getSsoJwkClaim()) !== true) {
             self::getSSOLogger()->write(sprintf(self::ERROR_TOKEN_VERIFICATION, __METHOD__));
         }
         return $decodedJwt;

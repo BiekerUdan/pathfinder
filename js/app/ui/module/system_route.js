@@ -215,7 +215,7 @@ define([
 
                                 // overwrite some params
                                 routeData.skipSearch = 0;
-                                routeData.flag = routeData.flag === 'shortest' ? 'secure' : 'shortest'; // toggle
+                                routeData.flag = routeData.flag === 'Shorter' ? 'Safer' : 'Shorter'; // toggle
 
                                 let requestData = {
                                     routeData: [routeData]
@@ -512,7 +512,7 @@ define([
                 excludeTypes:       (rowData.hasOwnProperty('excludeTypes'))        ? rowData.excludeTypes          : routeSettings.excludeTypes,
                 endpointsBubble:    (rowData.hasOwnProperty('endpointsBubble'))     ? rowData.endpointsBubble   | 0 : routeSettings.endpointsBubble,
                 connections:        (rowData.hasOwnProperty('connections'))         ? rowData.connections.value | 0 : 0,
-                flag:               (rowData.hasOwnProperty('flag'))                ? rowData.flag.value            : 'shortest'
+                flag:               (rowData.hasOwnProperty('flag'))                ? rowData.flag.value            : 'Shorter'
             };
         }
 
@@ -653,8 +653,8 @@ define([
             // 2: not searched
             let routeStatus = routeData.skipSearch ? 2 : 0;
 
-            // button class for flag (e.g. "secure" routes)
-            let flagButtonClass = routeData.flag === 'secure' ? 'txt-color-success' : '';
+            // button class for flag (e.g. "Safer" routes)
+            let flagButtonClass = routeData.flag === 'Safer' ? 'txt-color-success' : '';
 
             let connectionButton    = '<i class="fas ' + ['fa-code-branch', 'fa-rotate-270', 'txt-color'].join(' ') + '"></i>';
             let flagButton          = '<i class="fas ' + ['fa-shield-alt', 'txt-color', flagButtonClass].join(' ') + '"></i>';
@@ -1090,7 +1090,7 @@ define([
                                             wormholesSizeMin: routeDialogData.wormholesSizeMin || '',
                                             excludeTypes: SystemRouteModule.getLowerSizeConnectionTypes(routeDialogData.wormholesSizeMin),
                                             endpointsBubble: routeDialogData.hasOwnProperty('endpointsBubble') ? parseInt(routeDialogData.endpointsBubble) : 0,
-                                            flag: routeDialogData.hasOwnProperty('flag') ? routeDialogData.flag : 'shortest'
+                                            flag: routeDialogData.hasOwnProperty('flag') ? routeDialogData.flag : 'Shorter'
                                         }]
                                     };
 

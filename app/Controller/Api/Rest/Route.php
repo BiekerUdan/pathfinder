@@ -703,9 +703,18 @@ class Route extends AbstractRestController {
             }
 
             // search route -------------------------------------------------------------------------------------------
+            // Convert connections from array format [[from, to], ...] to object format required by ESI
+            // ESI expects: [{from: x, to: y}, ...] not [[x, y], ...]
+            $formattedConnections = array_map(function($connection) {
+                return [
+                    'from' => (int)$connection[0],
+                    'to' => (int)$connection[1]
+                ];
+            }, $connections);
+
             $options = [
                 'flag' => $filterData['flag'],
-                'connections' => $connections
+                'connections' => $formattedConnections
             ];
 
             $result = $this->getF3()->ccpClient()->send('getRoute', $systemFromId, $systemToId, $options);

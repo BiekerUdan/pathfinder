@@ -31,6 +31,11 @@ class AbstractIterator extends \RecursiveArrayIterator {
      * @param $data
      */
     function __construct($data){
+        // Convert stdClass objects to arrays
+        // This handles API endpoints that return {} (empty object) instead of [] (empty array)
+        if (is_object($data)) {
+            $data = json_decode(json_encode($data), true);
+        }
         parent::__construct($data, \RecursiveIteratorIterator::SELF_FIRST);
     }
 

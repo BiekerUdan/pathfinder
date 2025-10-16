@@ -56,5 +56,6 @@ composer-dev.lock
 /vendor/
 /history/
 
-# Docker environment
+# Environment files
+.env
 /docker/.env

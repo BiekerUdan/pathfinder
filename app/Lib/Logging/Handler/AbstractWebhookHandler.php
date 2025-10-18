@@ -11,6 +11,7 @@ namespace Exodus4D\Pathfinder\Lib\Logging\Handler;
 use Exodus4D\Pathfinder\Lib\Config;
 use Monolog\Handler;
 use Monolog\Logger;
+use Monolog\LogRecord;
 
 abstract class AbstractWebhookHandler extends Handler\AbstractProcessingHandler {
 
@@ -125,12 +126,15 @@ abstract class AbstractWebhookHandler extends Handler\AbstractProcessingHandler 
     /**
      * {@inheritdoc}
      *
-     * @param array $record
+     * @param array|LogRecord $record
      */
-    protected function write(array $record) : void {
-        $record = $this->excludeFields($record);
+    protected function write(array|LogRecord $record) : void {
+        // Convert LogRecord to array for compatibility with both Monolog 2.x and 3.x
+        $recordArray = $record instanceof LogRecord ? $record->toArray() : $record;
 
-        $postData = $this->getSlackData($record);
+        $recordArray = $this->excludeFields($recordArray);
+
+        $postData = $this->getSlackData($recordArray);
 
         $postData = $this->cleanAttachments($postData);
 

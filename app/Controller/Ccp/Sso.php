@@ -481,6 +481,7 @@ class Sso extends Api\User{
             return $jwkJson;
         }else{
             self::getSSOLogger()->write(sprintf(self::ERROR_LOGIN_FAILED, __METHOD__));
+            return [];  // Return empty array to satisfy return type
         }
     }
 

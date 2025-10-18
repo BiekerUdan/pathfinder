@@ -19,9 +19,9 @@ class Util {
      */
     static function arrayChangeKeyCaseRecursive($arr, $case = CASE_LOWER){
         if(is_array($arr)){
-            $arr = array_map( function($item){
+            $arr = array_map( function($item) use ($case){
                 if( is_array($item) )
-                    $item = self::arrayChangeKeyCaseRecursive($item);
+                    $item = self::arrayChangeKeyCaseRecursive($item, $case);
                 return $item;
             }, array_change_key_case((array)$arr, $case));
         }
@@ -157,13 +157,15 @@ class Util {
      */
     static function filesystemInfo(?string $source) : array {
         $info = [];
-        if(is_dir($source)){
-            $info['isDir'] = true;
-        }elseif(is_file($source)){
-            $info['isFile'] = true;
-        }
-        if(!empty($info)){
-            $info['chmod'] = substr(sprintf('%o', fileperms($source)), -4);
+        if($source !== null){
+            if(is_dir($source)){
+                $info['isDir'] = true;
+            }elseif(is_file($source)){
+                $info['isFile'] = true;
+            }
+            if(!empty($info)){
+                $info['chmod'] = substr(sprintf('%o', fileperms($source)), -4);
+            }
         }
         return $info;
     }

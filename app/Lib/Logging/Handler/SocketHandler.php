@@ -10,6 +10,7 @@ namespace Exodus4D\Pathfinder\Lib\Logging\Handler;
 
 
 use Monolog\Logger;
+use Monolog\LogRecord;
 
 class SocketHandler extends \Monolog\Handler\SocketHandler {
 
@@ -35,27 +36,30 @@ class SocketHandler extends \Monolog\Handler\SocketHandler {
     /**
      * overwrite default handle()
      * -> change data structure after processor() calls and before formatter() calls
-     * @param array $record
+     * @param array|LogRecord $record
      * @return bool
      */
-    public function handle(array $record) : bool {
-        if (!$this->isHandling($record)) {
+    public function handle(array|LogRecord $record) : bool {
+        // Convert LogRecord to array for compatibility with both Monolog 2.x and 3.x
+        $recordArray = $record instanceof LogRecord ? $record->toArray() : $record;
+
+        if (!$this->isHandling($recordArray)) {
             return false;
         }
 
-        $record = $this->processRecord($record);
+        $recordArray = $this->processRecord($recordArray);
 
-        $record = [
+        $recordArray = [
             'task' => 'logData',
             'load' => [
                 'meta' => $this->metaData,
-                'log' => $record
+                'log' => $recordArray
             ]
         ];
 
-        $record['formatted'] = $this->getFormatter()->format($record);
+        $recordArray['formatted'] = $this->getFormatter()->format($recordArray);
 
-        $this->write($record);
+        $this->write($recordArray);
 
         return false === $this->bubble;
     }

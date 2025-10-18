@@ -125,12 +125,10 @@ abstract class AbstractWebhookHandler extends Handler\AbstractProcessingHandler 
 
     /**
      * {@inheritdoc}
-     *
-     * @param array|LogRecord $record
      */
-    protected function write(array|LogRecord $record) : void {
-        // Convert LogRecord to array for compatibility with both Monolog 2.x and 3.x
-        $recordArray = $record instanceof LogRecord ? $record->toArray() : $record;
+    protected function write(LogRecord $record) : void {
+        // Convert LogRecord to array for processing
+        $recordArray = $record->toArray();
 
         $recordArray = $this->excludeFields($recordArray);
 

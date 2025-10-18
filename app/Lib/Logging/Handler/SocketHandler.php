@@ -36,20 +36,20 @@ class SocketHandler extends \Monolog\Handler\SocketHandler {
     /**
      * overwrite default handle()
      * -> change data structure after processor() calls and before formatter() calls
-     * @param array|LogRecord $record
+     * @param LogRecord $record
      * @return bool
      */
-    public function handle(array|LogRecord $record) : bool {
-        // Convert LogRecord to array for compatibility with both Monolog 2.x and 3.x
-        $recordArray = $record instanceof LogRecord ? $record->toArray() : $record;
-
-        if (!$this->isHandling($recordArray)) {
+    public function handle(LogRecord $record) : bool {
+        if (!$this->isHandling($record)) {
             return false;
         }
 
-        $recordArray = $this->processRecord($recordArray);
+        $record = $this->processRecord($record);
 
-        $recordArray = [
+        // Convert to array for socket transmission
+        $recordArray = $record->toArray();
+
+        $socketData = [
             'task' => 'logData',
             'load' => [
                 'meta' => $this->metaData,
@@ -57,9 +57,9 @@ class SocketHandler extends \Monolog\Handler\SocketHandler {
             ]
         ];
 
-        $recordArray['formatted'] = $this->getFormatter()->format($recordArray);
+        $socketData['formatted'] = $this->getFormatter()->format($record);
 
-        $this->write($recordArray);
+        $this->write($socketData);
 
         return false === $this->bubble;
     }

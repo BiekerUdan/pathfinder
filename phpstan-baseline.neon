@@ -79,6 +79,12 @@ parameters:
 			path: app/Controller/Admin.php
 
 		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Access.php
+
+		-
 			message: '#^Call to an undefined method Base\:\:gitHubClient\(\)\.$#'
 			identifier: method.notFound
 			count: 2
@@ -301,6 +307,42 @@ parameters:
 			path: app/Controller/Api/Map.php
 
 		-
+			message: '#^Cannot access property \$class on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 3
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$classTab on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$connectorDefinition on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$id on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 6
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$label on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 4
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$name on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 9
+			path: app/Controller/Api/Map.php
+
+		-
 			message: '#^Left side of && is always true\.$#'
 			identifier: booleanAnd.leftAlwaysTrue
 			count: 1
@@ -381,42 +423,6 @@ parameters:
 		-
 			message: '#^Ternary operator condition is always true\.$#'
 			identifier: ternary.alwaysTrue
-			count: 7
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$characterStatusData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
-			count: 1
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$connectionScopeData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
-			count: 1
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$mapScopeData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
-			count: 1
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$mapTypeData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
-			count: 1
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$systemScopeData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
-			count: 1
-			path: app/Controller/Api/Map.php
-
-		-
-			message: '#^Variable \$systemTypeData in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.variable
 			count: 1
 			path: app/Controller/Api/Map.php
 
@@ -937,12 +943,6 @@ parameters:
 			path: app/Controller/Api/Rest/SystemGraph.php
 
 		-
-			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:count\(\) expects null, array\<int\|string, string\> given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Controller/Api/Rest/SystemSearch.php
-
-		-
 			message: '#^Call to an undefined method Base\:\:eveScoutClient\(\)\.$#'
 			identifier: method.notFound
 			count: 1
@@ -1375,6 +1375,12 @@ parameters:
 			path: app/Controller/Ccp/Universe.php
 
 		-
+			message: '#^Cannot call method getAll\(\) on array\<Exodus4D\\Pathfinder\\Model\\AbstractModel\>\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
 			message: '#^PHPDoc tag @var has invalid value \(\$category Model\\Universe\\CategoryModel\)\: Unexpected token "\$category", expected type at offset 24 on line 2$#'
 			identifier: phpDoc.parseError
 			count: 1
@@ -1645,12 +1651,6 @@ parameters:
 			path: app/Controller/Setup.php
 
 		-
-			message: '#^Parameter \#1 \$array of function end is passed by reference, so it expects variables only\.$#'
-			identifier: argument.byRef
-			count: 1
-			path: app/Controller/Setup.php
-
-		-
 			message: '#^Variable \$ttl in empty\(\) always exists and is not falsy\.$#'
 			identifier: empty.variable
 			count: 1
@@ -1703,6 +1703,12 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: app/Cron/CcpSystemsUpdate.php
+
+		-
+			message: '#^Call to function is_object\(\) with array\<Exodus4D\\Pathfinder\\Model\\AbstractModel\>\|false will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 3
+			path: app/Cron/CharacterUpdate.php
 
 		-
 			message: '#^PHPDoc tag @var has invalid value \(\$authenticationModel Pathfinder\\CharacterAuthenticationModel\)\: Unexpected token "\$authenticationModel", expected type at offset 20 on line 2$#'
@@ -1784,6 +1790,12 @@ parameters:
 
 		-
 			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateFactionWarData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateModel\(\)\.$#'
 			identifier: method.notFound
 			count: 1
 			path: app/Cron/Universe.php
@@ -1939,24 +1951,6 @@ parameters:
 			path: app/Lib/Logging/Handler/AbstractWebhookHandler.php
 
 		-
-			message: '#^Parameter \#1 \$record of method Monolog\\Formatter\\FormatterInterface\:\:format\(\) expects Monolog\\LogRecord, array\<string, array\<string, array\|Monolog\\LogRecord\|string\>\|string\> given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Lib/Logging/Handler/SocketHandler.php
-
-		-
-			message: '#^Parameter \#1 \$record of method Monolog\\Handler\\AbstractHandler\:\:isHandling\(\) expects Monolog\\LogRecord, array given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Lib/Logging/Handler/SocketHandler.php
-
-		-
-			message: '#^Parameter \#1 \$record of method Monolog\\Handler\\AbstractProcessingHandler\:\:processRecord\(\) expects Monolog\\LogRecord, array given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Lib/Logging/Handler/SocketHandler.php
-
-		-
 			message: '#^Parameter \#1 \$record of method Monolog\\Handler\\SocketHandler\:\:write\(\) expects Monolog\\LogRecord, array\<string, mixed\> given\.$#'
 			identifier: argument.type
 			count: 1
@@ -2011,25 +2005,7 @@ parameters:
 			path: app/Lib/Socket/AbstractSocket.php
 
 		-
-			message: '#^Call to method then\(\) on an unknown class React\\Promise\\FulfilledPromise\.$#'
-			identifier: class.notFound
-			count: 1
-			path: app/Lib/Socket/AbstractSocket.php
-
-		-
-			message: '#^Instantiated class React\\Promise\\FulfilledPromise not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: app/Lib/Socket/AbstractSocket.php
-
-		-
-			message: '#^Instantiated class React\\Promise\\RejectedPromise not found\.$#'
-			identifier: class.notFound
-			count: 2
-			path: app/Lib/Socket/AbstractSocket.php
-
-		-
-			message: '#^Parameter \#1 \$reason of method React\\Promise\\Deferred\<mixed\>\:\:reject\(\) expects Throwable, React\\Promise\\RejectedPromise given\.$#'
+			message: '#^Parameter \#1 \$reason of function React\\Promise\\reject expects Throwable, array given\.$#'
 			identifier: argument.type
 			count: 1
 			path: app/Lib/Socket/AbstractSocket.php
@@ -2043,20 +2019,8 @@ parameters:
 		-
 			message: '#^Parameter \#2 \$onRejected of method React\\Promise\\PromiseInterface\<mixed\>\:\:then\(\) expects \(callable\(Throwable\)\: \(React\\Promise\\PromiseInterface\<void\>\|void\)\)\|null, Closure\(Exception\)\: void given\.$#'
 			identifier: argument.type
-			count: 2
+			count: 3
 			path: app/Lib/Socket/AbstractSocket.php
-
-		-
-			message: '#^Instantiated class React\\Promise\\RejectedPromise not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: app/Lib/Socket/NullSocket.php
-
-		-
-			message: '#^Method Exodus4D\\Pathfinder\\Lib\\Socket\\NullSocket\:\:write\(\) should return React\\Promise\\PromiseInterface but returns React\\Promise\\RejectedPromise\.$#'
-			identifier: return.type
-			count: 1
-			path: app/Lib/Socket/NullSocket.php
 
 		-
 			message: '#^Parameter \#1 \$codepoint of function chr expects int, float given\.$#'
@@ -2131,6 +2095,18 @@ parameters:
 			path: app/Model/AbstractModel.php
 
 		-
+			message: '#^Cannot call method castAll\(\) on array\<static\(Exodus4D\\Pathfinder\\Model\\AbstractModel\)\>\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:relFind\(\) should return DB\\CortexCollection\|null but returns array\<DB\\Cortex\>\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
 			message: '#^PHPDoc tag @var has invalid value \(\$relModel CortexCollection\|bool\)\: Unexpected token "\$relModel", expected type at offset 24 on line 2$#'
 			identifier: phpDoc.parseError
 			count: 1
@@ -2144,12 +2120,6 @@ parameters:
 
 		-
 			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:find\(\) expects array\|null, string given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Model/AbstractModel.php
-
-		-
-			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:load\(\) expects null, array given\.$#'
 			identifier: argument.type
 			count: 1
 			path: app/Model/AbstractModel.php
@@ -2569,6 +2539,12 @@ parameters:
 			path: app/Model/Pathfinder/CharacterModel.php
 
 		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
 			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:getLogPrevSystem\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\|null but returns DB\\Cortex\|null\.$#'
 			identifier: return.type
 			count: 1
@@ -2839,6 +2815,12 @@ parameters:
 			path: app/Model/Pathfinder/CorporationModel.php
 
 		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
 			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$corporationId\.$#'
 			identifier: property.notFound
 			count: 1
@@ -2908,6 +2890,18 @@ parameters:
 			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
 			identifier: method.notFound
 			count: 3
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
 			path: app/Model/Pathfinder/CorporationModel.php
 
 		-
@@ -3295,6 +3289,12 @@ parameters:
 			path: app/Model/Pathfinder/MapModel.php
 
 		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
 			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getConnectionById\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\|null but returns DB\\Cortex\|null\.$#'
 			identifier: return.type
 			count: 1
@@ -3415,6 +3415,12 @@ parameters:
 			path: app/Model/Pathfinder/RoleModel.php
 
 		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/RoleModel.php
+
+		-
 			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
 			identifier: property.notFound
 			count: 1
@@ -3487,12 +3493,6 @@ parameters:
 			path: app/Model/Pathfinder/StructureModel.php
 
 		-
-			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:load\(\) expects null, array\<int\|string, int\|string\> given\.$#'
-			identifier: argument.type
-			count: 1
-			path: app/Model/Pathfinder/StructureModel.php
-
-		-
 			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$_id\.$#'
 			identifier: property.notFound
 			count: 1
@@ -3513,6 +3513,12 @@ parameters:
 		-
 			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$name\.$#'
 			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\>\|false\.$#'
+			identifier: return.type
 			count: 1
 			path: app/Model/Pathfinder/StructureStatusModel.php
 

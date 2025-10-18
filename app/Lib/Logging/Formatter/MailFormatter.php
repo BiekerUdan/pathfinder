@@ -15,12 +15,12 @@ use Monolog\LogRecord;
 class MailFormatter implements Formatter\FormatterInterface {
 
     /**
-     * @param array|LogRecord $record
+     * @param LogRecord $record
      * @return string
      */
-    public function format(array|LogRecord $record): string {
-        // Convert LogRecord to array for compatibility with both Monolog 2.x and 3.x
-        $recordArray = $record instanceof LogRecord ? $record->toArray() : $record;
+    public function format(LogRecord $record): string {
+        // Convert LogRecord to array for processing
+        $recordArray = $record->toArray();
 
         $tplDefaultData = [
             'tplPretext' => $recordArray['message'],

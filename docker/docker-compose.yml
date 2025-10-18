@@ -1,0 +1,123 @@
+name: pathfinder
+
+services:
+  mariadb:
+    image: mariadb:10.5
+    container_name: pathfinder_mariadb
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ../export/sql:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    networks:
+      - pathfinder_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-pathfinder_root}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:5
+    container_name: pathfinder_redis
+    restart: unless-stopped
+    env_file:
+      - .env
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-pathfinder_redis} --maxmemory 64mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    networks:
+      - pathfinder_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  websocket:
+    image: pathfinder-websocket:php8.4
+    container_name: pathfinder_websocket
+    ports:
+      - "8020:8020"  # WebSocket port for browser connections
+      - "5555:5555"  # TCP port for internal server communication
+    restart: unless-stopped
+    # Optional: Override default settings via environment or command
+    command: ["php", "cmd.php", "--wsHost=0.0.0.0", "--wsPort=8020", "--tcpHost=0.0.0.0", "--tcpPort=5555", "--debug=2"]
+    networks:
+      - pathfinder_network
+
+  # Pathfinder Application with PHP-FPM
+  pathfinder:
+    image: pathfinder-fpm:alpine
+    container_name: pathfinder_app
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # F3 Configuration
+      DEBUG: ${DEBUG:-0}
+
+      # Application URL
+      URL: ${APP_URL:-http://dev-pf.bieker.ca:8000}
+
+    volumes:
+      # Mount entire project for development (comment out for production)
+      - ..:/app
+
+      # Persistent data (mounted separately to prevent overwriting)
+      - app_logs:/app/logs
+      - app_cache:/app/tmp/cache
+
+    networks:
+      - pathfinder_network
+    healthcheck:
+      test: ["CMD-SHELL", "pidof php-fpm"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  # Nginx web server
+  nginx:
+    image: nginx:alpine
+    container_name: pathfinder_nginx
+    restart: unless-stopped
+    depends_on:
+      - pathfinder
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ..:/app:ro
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    networks:
+      - pathfinder_network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  pathfinder_network:
+    driver: bridge
+
+volumes:
+  mariadb_data:
+    driver: local
+  redis_data:
+    driver: local
+  app_logs:
+    driver: local
+  app_cache:
+    driver: local
+  app_export:
+    driver: local

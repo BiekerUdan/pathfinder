@@ -1,0 +1,17 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: 5
+    paths:
+        - app
+    excludePaths:
+        - app/Data
+    scanDirectories:
+        - vendor
+    scanFiles:
+        - vendor/bcosca/fatfree-core/base.php
+    bootstrapFiles:
+        - vendor/autoload.php
+    phpVersion: 80400
+    reportUnmatchedIgnoredErrors: false

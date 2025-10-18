@@ -14,11 +14,11 @@ use React\Promise;
 interface SocketInterface {
 
     /**
-     * @param string $action
-     * @param null $data
+     * @param string $task
+     * @param null $load
      * @return Promise\PromiseInterface
      */
-    public function write(string $action, $data = null) : Promise\PromiseInterface;
+    public function write(string $task, $load = null) : Promise\PromiseInterface;
 
     /**
      * @param string $class

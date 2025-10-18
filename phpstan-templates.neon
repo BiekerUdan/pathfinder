@@ -1,0 +1,6 @@
+parameters:
+    level: 8
+    paths:
+        - tmp
+    phpVersion: 80400
+    reportUnmatchedIgnoredErrors: false

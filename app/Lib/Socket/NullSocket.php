@@ -33,6 +33,6 @@ class NullSocket extends AbstractSocket {
      * @return Promise\PromiseInterface
      */
     public function write(string $task, $load = null) : Promise\PromiseInterface {
-        return new Promise\RejectedPromise();
+        return Promise\reject(new \Exception('NullSocket cannot write'));
     }
 }

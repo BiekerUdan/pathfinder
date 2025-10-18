@@ -1,0 +1,65 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker files (keep docker/ since we need worker.php and .rr.yaml)
+docker-compose.yml
+.dockerignore
+
+# Local lib (uses path symlink, won't work in Docker)
+lib/
+
+# CI/CD
+.github/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and cache
+logs/
+tmp/
+.phpunit.cache/
+coverage-pathfinder/
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+tests/
+phpunit.xml
+phpstan.neon
+phpstan-baseline.neon
+phpstan-report.txt
+
+# Old files
+docker.old/
+
+# Build artifacts
+node_modules/
+vendor/
+
+# Extra docs
+BASELINE_REVIEW.md
+CRITICAL_ISSUES.md
+FIXES_APPLIED.md
+PATHFINDER_TEST_COVERAGE.md
+PHP8_UPGRADE_SUMMARY.md
+PHPSTAN_ANALYSIS.md
+TEST_COVERAGE_ANALYSIS_*.md
+UNIT_TEST_SUMMARY.md
+
+# SQL files (except schema needed for setup)
+export/sql/*.sql
+
+# Config overrides (should be env-based in Docker)
+conf/

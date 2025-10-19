@@ -47,7 +47,7 @@
     "bcosca/fatfree-core": "^3.8",
     "ikkez/f3-cortex": "^1.7.8",
     "ikkez/f3-sheet": "0.4.*",
-    "xfra35/f3-cron": "1.2.*",
+    "xfra35/f3-cron": "1.3.*",
     "monolog/monolog": "^3.0",
     "symfony/mailer": "^7.0",
     "league/html-to-markdown": "^5.0",

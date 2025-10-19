@@ -2,25 +2,19 @@
 
 #### Mapping tool for [*EVE ONLINE*](https://www.eveonline.com)
 
-This Pathfinder Fork is an attempt to make a community supported fork in the absence of [Exodus4d](https://github.com/exodus4d) that will include bug fixes and be upgraded for any changes to the Eve Online universe.
+This is a fork of what was originally [Pathfinder](https://github.com/exodus4d/pathfinder) the Eve-Online mapping and logistics tool
 
-**For installation please see our [Docker-compose solution](https://github.com/goryn-clade/pathfinder-containers) that includes a detailed guide on how to get up and running.**
+Many people have contributed to this project over time.
+My intent with this fork is to upgrade the app to modern PHP versions and dependencies.
 
-If you wish to contribute please join the [Pathfinder Slack](https://join.slack.com/t/pathfinder-eve-online/shared_invite/enQtMzMyOTkyMjczMTA3LWI2NGE1OTY5ODBmNDZlMDY3MDIzYjk5ZTljM2JjZjIwNDRkNzMyMTEwMDUzOGQwM2E3ZjE1NGEwNThlMzYzY2Y).
+Some of the changes are specific to my own use case where I run many pathfinder instances in kubernetes in a self serve hosting platform, but I hope to keep the application itself and the container builds generic enough to be useful to others.
 
-- Project URL [https://www.pathfinder-w.space](https://www.pathfinder-w.space)
 - Screenshots [imgur.com](http://imgur.com/a/k2aVa)
 - Videos [youtube.com](https://www.youtube.com/channel/UC7HU7XEoMbqRwqxDTbMjSPg)
 - Licence [MIT](http://opensource.org/licenses/MIT)
 
-#### Development
-- Developer [Slack](https://slack.com) chat:
-  - https://pathfinder-eve-online.slack.com
-  - Join channel [pathfinder-eve-online.slack.com](https://join.slack.com/t/pathfinder-eve-online/shared_invite/enQtMzMyOTkyMjczMTA3LWI2NGE1OTY5ODBmNDZlMDY3MDIzYjk5ZTljM2JjZjIwNDRkNzMyMTEwMDUzOGQwM2E3ZjE1NGEwNThlMzYzY2Y)
-  - Can´t join? pathfinder@exodus4d.de
-
 **Feel free to check the code for bugs and security issues.
-Issues should be reported in the [Issue](https://github.com/exodus4d/pathfinder/issues) section.**
+Issues should be reported in the [Issue](https://github.com/biekerudan/pathfinder/issues) section.**
 
 ***
 

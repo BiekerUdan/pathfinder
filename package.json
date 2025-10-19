@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exodus4d/pathfinder.git"
+    "url": "git+https://github.com/biekerudan/pathfinder.git"
   },
   "browserslist": [
     "last 2 versions",
@@ -62,10 +62,10 @@
   "author": "Exodus 4D <pathfinder@exodus4d.de> (https://github.com/exodus4d)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/exodus4d/pathfinder/issues",
-    "email": "pathfinder@exodus4d.de"
+    "url": "https://github.com/biekerudan/pathfinder/issues",
+    "email": "bieker@bieker.ca"
   },
-  "homepage": "https://github.com/exodus4d/pathfinder#readme",
+  "homepage": "https://github.com/biekerudan/pathfinder#readme",
   "private": true,
   "dependencies": {
     "node-sass": "^9.0.0"

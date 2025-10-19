@@ -34,6 +34,16 @@ class AppController extends Controller {
         $f3->set('tplJsView', 'login');
 
         if($return = parent::beforeroute($f3, $params)){
+            // Initialize $_SESSION['SSO'] to prevent PHP 8.4 "array offset on null" errors
+            // F3 templates access $_SESSION directly, not F3's hive SESSION variable
+            if(!isset($_SESSION['SSO'])){
+                $_SESSION['SSO'] = ['ERROR' => null];
+            }
+
+            // Initialize registration status variables
+            $f3->set('registrationStatusButton', '');
+            $f3->set('registrationStatusTitle', 'Login with EVE Online');
+
             // href for SSO Auth
             $f3->set('tplAuthType', $f3->get('BASE') . $f3->alias( 'sso', ['action' => 'requestAuthorization'] ));
 

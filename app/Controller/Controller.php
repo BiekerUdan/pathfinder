@@ -103,6 +103,22 @@ class Controller {
 
             $this->setTemplate(Config::getPathfinderData('view.index'));
 
+            // Set default template variables to prevent PHP 8.4 undefined variable notices
+            if(!$f3->exists('tplBodyClass')){
+                $f3->set('tplBodyClass', '');
+            }
+            if(!$f3->exists('tplCharacterId')){
+                $f3->set('tplCharacterId', null);
+            }
+            if(!$f3->exists('tplJsView')){
+                $f3->set('tplJsView', '');
+            }
+            if(!$f3->exists('tplPageContent')){
+                $f3->set('tplPageContent', '');
+            }
+            if(!$f3->exists('tplPageTitle')){
+                $f3->set('tplPageTitle', 'Pathfinder');
+            }
 
             $f3->set('tplImage', Format\Image::instance());
         }

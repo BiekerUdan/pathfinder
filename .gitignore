@@ -59,3 +59,11 @@ composer-dev.lock
 # Environment files
 .env
 /docker/.env
+CLAUDE.md
+.claude
+
+# PHPUnit
+.phpunit.result.cache
+.phpunit.cache
+
+/coverage-*/

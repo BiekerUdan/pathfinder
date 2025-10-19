@@ -98,8 +98,10 @@ abstract class AbstractSocket implements SocketInterface {
 
         $this->connect()
             ->then(
-                function(Socket\ConnectionInterface $connection) use ($payload, $deferred) {
-                    return (new Promise\FulfilledPromise($connection))
+                function(Socket\ConnectionInterface $connection) use ($payload, $deferred): Promise\PromiseInterface {
+                    /** @var Promise\PromiseInterface $promise */
+                    $promise = Promise\resolve($connection);
+                    return $promise
                         ->then($this->initWrite($payload))
                         ->then($this->initRead())
                         ->then($this->initClose($connection))
@@ -107,11 +109,9 @@ abstract class AbstractSocket implements SocketInterface {
                             function($payload) use ($deferred) {
                                 // we got valid data from socketServer -> check if $payload contains an error
                                 if(is_array($payload) && $payload['task'] == 'error'){
-                                    // ... wrap error payload in a rejectedPromise
+                                    // reject with exception
                                     $deferred->reject(
-                                        new Promise\RejectedPromise(
-                                            new \Exception($payload['load'])
-                                        )
+                                        new \Exception($payload['load'])
                                     );
                                 }else{
                                     // good response
@@ -134,7 +134,7 @@ abstract class AbstractSocket implements SocketInterface {
                 // final exception handler for rejected promises -> convert to payload array
                 // -> No socket related Exceptions should be thrown down the chain
                 function(\Exception $e){
-                    return new Promise\RejectedPromise(
+                    return Promise\reject(
                         $this->newPayload('error', $e->getMessage())
                     );
                 });

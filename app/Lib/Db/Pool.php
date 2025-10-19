@@ -156,7 +156,7 @@ class Pool extends \Prefab {
      * @return \Exception[]
      */
     public function getErrors(string $alias, int $limit = 1) : array {
-        return array_slice((array)$this->errors[$alias] , 0, $limit);
+        return array_slice((array)($this->errors[$alias] ?? []) , 0, $limit);
     }
 
     /**
@@ -206,7 +206,7 @@ class Pool extends \Prefab {
      * @param \Exception $e
      */
     protected function pushError(string $alias, \Exception $e){
-        if(!is_array($this->errors[$alias])){
+        if(!isset($this->errors[$alias]) || !is_array($this->errors[$alias])){
             $this->errors[$alias] = [];
         }
 
@@ -223,7 +223,7 @@ class Pool extends \Prefab {
 
         array_unshift($this->errors[$alias], $e);
         if(count($this->errors[$alias]) > 5){
-            $this->errors[$alias] = array_pop($this->errors[$alias]);
+            array_pop($this->errors[$alias]);
         }
     }
 

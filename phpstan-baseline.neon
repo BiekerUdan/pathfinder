@@ -1,0 +1,4981 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/AccessController.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/AccessController.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/AccessController.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$roleId\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationRightModel\:\:\$rightId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 3
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Instanceof between null and Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Parameter \#3 \$character of method Exodus4D\\Pathfinder\\Controller\\Admin\:\:dispatch\(\) expects null, Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Admin.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Access.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:gitHubClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/GitHub.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$scopeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$source\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$target\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipTypeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$stationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$structureId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$cloneLocationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$cloneLocationType\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$posX\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$posY\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\|Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 8
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$nextBookmarks\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$trackAbyssalJumps\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$tag\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getConnections\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getLogData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getNewSystem\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getTypes\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:isAlliance\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:isCorporation\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:isPrivate\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:saveConnection\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:saveSystem\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setActivityLogging\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$class on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 3
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$classTab on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$connectorDefinition on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$id on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 6
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$label on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 4
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Cannot access property \$name on Exodus4D\\Pathfinder\\Model\\AbstractModel\|false\.$#'
+			identifier: property.nonObject
+			count: 9
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:save\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Negated boolean expression is always true\.$#'
+			identifier: booleanNot.alwaysTrue
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$categoryUniverseModel Universe\\CategoryModel\)\: Unexpected token "\$categoryUniverseModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection Pathfinder\\ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 48 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$groupUniverseModel Universe\\GroupModel\)\: Unexpected token "\$groupUniverseModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 3
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$mapScope Pathfinder\\MapScopeModel\)\: Unexpected token "\$mapScope", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$mapType Pathfinder\\MapTypeModel\)\: Unexpected token "\$mapType", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$typeModel Universe\\TypeModel\)\: Unexpected token "\$typeModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:find\(\) expects array\|null, string given\.$#'
+			identifier: argument.type
+			count: 6
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Parameter \#1 \$map of method Exodus4D\\Pathfinder\\Controller\\Api\\Map\:\:broadcastMapAccess\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 2
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 1
+			path: app/Controller/Api/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$source\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$target\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getConnectionById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getConnections\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSystemById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setAutoScopeAndType\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:save\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection Pathfinder\\ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 3
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Parameter \#1 \$map of method Exodus4D\\Pathfinder\\Controller\\AccessController\:\:broadcastMap\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Controller/Api/Rest/Connection.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getNewLog\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Log.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Log.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Log.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection Pathfinder\\ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Log.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$log Pathfinder\\ConnectionLogModel\)\: Unexpected token "\$log", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Log.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AbstractPathfinderModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:isCorporation\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:save\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Parameter \#1 \$map of method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\Map\:\:update\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Controller/Api/Rest/Map.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:eveScoutClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Comparison operation "\>" between 0 and 0 is always false\.$#'
+			identifier: greater.alwaysFalse
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^PHPDoc tag @var with type Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel is not subtype of native type array\{Exodus4D\\Pathfinder\\Model\\AbstractModel\|null, array\<int, \(int\<min, \-1\>\|int\<1, max\>\|non\-falsy\-string\)\>, Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\|null\}\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Parameter \#1 \$systemId of method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\Route\:\:getUniverseSystemInfo\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, string\> given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: app/Controller/Api/Rest/Route.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:delete\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getNewSignature\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignatureByName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignatures\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasChanged\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateSignaturesHistory\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:save\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$signature Pathfinder\\SystemSignatureModel\)\: Unexpected token "\$signature", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$signature Pathfinder\\SystemSignatureModel\)\: Unexpected token "\$signature", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Pathfinder\\SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 3
+			path: app/Controller/Api/Rest/Signature.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getNewSignature\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignatureById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignatureHistoryEntry\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignatures\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSignaturesHistory\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateSignaturesHistory\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Pathfinder\\SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Controller/Api/Rest/SignatureHistory.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getByName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getDataByCorporations\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$structure Pathfinder\\StructureModel\)\: Unexpected token "\$structure", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^Parameter \#1 \$structure of method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:saveStructure\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/Structure.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$persistentAliases\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$persistentSignatures\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getNewSystem\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getSystemById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\System\:\:update\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map Pathfinder\\MapModel\)\: Unexpected token "\$map", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$newSystem Pathfinder\\SystemModel\)\: Unexpected token "\$newSystem", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Pathfinder\\SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Parameter \#1 \$map of method Exodus4D\\Pathfinder\\Controller\\AccessController\:\:broadcastMap\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Parameter \#1 \$map of method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\System\:\:checkDeleteMode\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Parameter \#1 \$system of method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\System\:\:update\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SystemGraph.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:eveScoutClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Rest/SystemThera.php
+
+		-
+			message: '#^Parameter \#1 \$systemId of method Exodus4D\\Pathfinder\\Controller\\Api\\Rest\\SystemThera\:\:getUniverseSystemInfo\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/SystemThera.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Rest/SystemThera.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:\$quotekey\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$isPaused\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getTypesCount\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$systemStaticModel Model\\Universe\\SystemStaticModel\)\: Unexpected token "\$systemStaticModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, int\<min, \-1\>\|int\<1, max\>\|string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Statistic.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str_pad expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Statistic.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Statistic.php
+
+		-
+			message: '#^Parameter \#3 \$pad_string of function str_pad expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Api/Statistic.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/System.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:sendRallyPoke\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/System.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Pathfinder\\SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Api/System.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$systems\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Universe.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/Universe.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Cannot call method dump\(\) on object\|false\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controller/Api/User.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$allianceId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$userCharacter\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ssoClient\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getUser\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasUserCharacter\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:isAuthorized\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateFromESI\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Call to sprintf contains 0 placeholders, 1 value given\.$#'
+			identifier: argument.sprintf
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Controller\\Ccp\\Sso\:\:updateCharacter\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\|null but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$alliance Pathfinder\\AllianceModel\)\: Unexpected token "\$alliance", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$character Pathfinder\\CharacterModel\)\: Unexpected token "\$character", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$corporation Pathfinder\\CorporationModel\)\: Unexpected token "\$corporation", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$user Pathfinder\\UserModel\)\: Unexpected token "\$user", expected type at offset 56 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$userCharactersModel Pathfinder\\UserCharacterModel\)\: Unexpected token "\$userCharactersModel", expected type at offset 48 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Parameter \#1 \$authCode of method Exodus4D\\Pathfinder\\Controller\\Ccp\\Sso\:\:verifyAuthorizationCode\(\) expects string, true given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Parameter \#1 \$character of method Exodus4D\\Pathfinder\\Controller\\Api\\User\:\:loginByCharacter\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between int\<0, max\>\|false and true will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Variable \$characterData in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Variable \$verificationCharacterData in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Controller/Ccp/Sso.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$storeDogmaAttributes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Access to undefined constant Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:CACHE_INDEX_EXPIRE_KEY\.$#'
+			identifier: classConstant.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:buildIndex\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getHashKey\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:loadGroupsData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:loadTypesData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to an undefined static method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:buildTableIndex\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Call to function is_object\(\) with stdClass will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Cannot call method getAll\(\) on array\<Exodus4D\\Pathfinder\\Model\\AbstractModel\>\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$category Model\\Universe\\CategoryModel\)\: Unexpected token "\$category", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$group Model\\Universe\\GroupModel\)\: Unexpected token "\$group", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Model\\Universe\\SystemModel\)\: Unexpected token "\$system", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Model\\Universe\\SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Model\\Universe\\SystemModel\)\: Unexpected token "\$system", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Ccp/Universe.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$esiScopes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$expires\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$token\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:hasUserCharacter\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:isAuthorized\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasUserCharacters\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:logout\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Controller\\Controller\:\:getCookieCharacters\(\) should return array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\> but returns array\<DB\\Cortex\>\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Controller\\Controller\:\:getUser\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\|null but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$character Pathfinder\\CharacterModel\)\: Unexpected token "\$character", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$character Pathfinder\\CharacterModel\)\: Unexpected token "\$character", expected type at offset 40 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$characterAuth Pathfinder\\CharacterAuthenticationModel\)\: Unexpected token "\$characterAuth", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$client CcpClient\)\: Unexpected token "\$client", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$userModel Pathfinder\\UserModel\)\: Unexpected token "\$userModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Variable \$alias in empty\(\) always exists and is always falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Variable \$trace in empty\(\) always exists and is always falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/LogController.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getCountableColumnNames\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/LogController.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$activityLogModel Pathfinder\\ActivityLogModel\)\: Unexpected token "\$activityLogModel", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/LogController.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/MapController.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Controller/MapController.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 11
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getGroupsCount\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getTypesCount\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Call to function is_int\(\) with ''''\|''0''\|null will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Call to function is_string\(\) with false will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$categoryUniverseModel Universe\\CategoryModel\)\: Unexpected token "\$categoryUniverseModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$db Sql\)\: Unexpected token "\$db", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$file \\SplFileInfo\)\: Unexpected token "\$file", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$groupUniverseModel Universe\\GroupModel\)\: Unexpected token "\$groupUniverseModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$systemNeighbourModel Universe\\SystemNeighbourModel\)\: Unexpected token "\$systemNeighbourModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$systemStaticModel Universe\\SystemStaticModel\)\: Unexpected token "\$systemStaticModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Variable \$ttl in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Controller/Setup.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$lastExecState\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Cron/AbstractCron.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$timeCheck \(float\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Cron/AbstractCron.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$file \\SplFileInfo\)\: Unexpected token "\$file", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/Cache.php
+
+		-
+			message: '#^Parameter \#2 \$mTime of static method Exodus4D\\Pathfinder\\Data\\Filesystem\\Search\:\:getFilesByMTime\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Cron/Cache.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Cron/CcpSystemsUpdate.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Cron/CcpSystemsUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$pfDB Sql\)\: Unexpected token "\$pfDB", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/CcpSystemsUpdate.php
+
+		-
+			message: '#^Parameter \#2 \$args of method Exodus4D\\Pathfinder\\Lib\\Db\\Sql\:\:exec\(\) expects null, array\<string, string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Cron/CcpSystemsUpdate.php
+
+		-
+			message: '#^Call to function is_object\(\) with array\<Exodus4D\\Pathfinder\\Model\\AbstractModel\>\|false will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 3
+			path: app/Cron/CharacterUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$authenticationModel Pathfinder\\CharacterAuthenticationModel\)\: Unexpected token "\$authenticationModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/CharacterUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$characterLog Pathfinder\\CharacterLogModel\)\: Unexpected token "\$characterLog", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/CharacterUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$characterLogModel Pathfinder\\CharacterLogModel\)\: Unexpected token "\$characterLogModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/CharacterUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$characterModel Pathfinder\\CharacterModel\)\: Unexpected token "\$characterModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/CharacterUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$file \\SplFileInfo\)\: Unexpected token "\$file", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/MapHistory.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Cron/MapUpdate.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection Pathfinder\\ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Cron/MapUpdate.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Cron/StatisticsUpdate.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str_pad expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Cron/StatisticsUpdate.php
+
+		-
+			message: '#^Parameter \#3 \$pad_string of function str_pad expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Cron/StatisticsUpdate.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$security\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 8
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:buildIndex\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateFactionWarData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateModel\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:updateSovereigntyData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Invalid array key type float\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$model Model\\Universe\\SystemModel\)\: Unexpected token "\$model", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Model\\Universe\\SystemModel\)\: Unexpected token "\$system", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system Model\\Universe\\SystemModel\)\: Unexpected token "\$system", expected type at offset 76 on line 3$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$systemModel Model\\Universe\\SystemModel\)\: Unexpected token "\$systemModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str_pad expects string, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strlen expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 2
+			path: app/Cron/Universe.php
+
+		-
+			message: '#^Parameter \$onsuspect of method Exodus4D\\Pathfinder\\Db\\Sql\\Mysql\\Session\:\:__construct\(\) has invalid type Exodus4D\\Pathfinder\\Db\\Sql\\Mysql\\callback\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/Db/Sql/Mysql/Session.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\ESI\\Client\\ApiInterface\:\:setLogRequestHeaders\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Lib/Api/AbstractClient.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\ESI\\Client\\ApiInterface\:\:setLogResponseHeaders\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Lib/Api/AbstractClient.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Lib/Cron.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$isPaused\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Lib/Cron.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Lib/Cron.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Lib\\Cron\:\:getJob\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\|null but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Lib/Cron.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$job Pathfinder\\CronModel\)\: Unexpected token "\$job", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Lib/Cron.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$lastError \\Exception\)\: Unexpected token "\$lastError", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Lib/Db/Pool.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\[\]\[\]\)\: Unexpected token "\[", expected type at offset 16 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Lib/Db/Pool.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Lib/Logging/AbstractCharacterLog.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Lib/Logging/AbstractCharacterLog.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 2
+			path: app/Lib/Logging/AbstractCharacterLog.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$formatterKey \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Lib/Logging/AbstractLog.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#3 \$handlerParams \(stdClass\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Lib/Logging/AbstractLog.php
+
+		-
+			message: '#^Parameter \#1 \$level of method Monolog\\Handler\\AbstractHandler\:\:__construct\(\) expects 100\|200\|250\|300\|400\|500\|550\|600\|''ALERT''\|''alert''\|''CRITICAL''\|''critical''\|''DEBUG''\|''debug''\|''EMERGENCY''\|''emergency''\|''ERROR''\|''error''\|''INFO''\|''info''\|''NOTICE''\|''notice''\|''WARNING''\|''warning''\|Monolog\\Level, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Lib/Logging/Handler/AbstractWebhookHandler.php
+
+		-
+			message: '#^Parameter \#1 \$record of method Monolog\\Handler\\SocketHandler\:\:write\(\) expects Monolog\\LogRecord, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Lib/Logging/Handler/SocketHandler.php
+
+		-
+			message: '#^Parameter \#2 \$level of method Monolog\\Handler\\SocketHandler\:\:__construct\(\) expects 100\|200\|250\|300\|400\|500\|550\|600\|''ALERT''\|''alert''\|''CRITICAL''\|''critical''\|''DEBUG''\|''debug''\|''EMERGENCY''\|''emergency''\|''ERROR''\|''error''\|''INFO''\|''info''\|''NOTICE''\|''notice''\|''WARNING''\|''warning''\|Monolog\\Level, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Lib/Logging/Handler/SocketHandler.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$log AbstractLog\)\: Unexpected token "\$log", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Lib/Logging/LogCollection.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$formatterKey \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Lib/Logging/LogInterface.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#3 \$handlerParams \(stdClass\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Lib/Logging/LogInterface.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: app/Lib/Logging/RallyLog.php
+
+		-
+			message: '#^Call to an undefined method Monolog\\Handler\\HandlerInterface\:\:setFormatter\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Lib/Monolog.php
+
+		-
+			message: '#^Property Exodus4D\\Pathfinder\\Lib\\Monolog\:\:\$logs \(array\<array\<Exodus4D\\Pathfinder\\Lib\\Logging\\LogCollection\|Exodus4D\\Pathfinder\\Lib\\Logging\\MapLog\>\>\) does not accept array\<array\<Exodus4D\\Pathfinder\\Lib\\Logging\\AbstractLog\>\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/Lib/Monolog.php
+
+		-
+			message: '#^Anonymous function has an unused use \$connection\.$#'
+			identifier: closure.unusedUse
+			count: 1
+			path: app/Lib/Socket/AbstractSocket.php
+
+		-
+			message: '#^Parameter \#1 \$reason of function React\\Promise\\reject expects Throwable, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Lib/Socket/AbstractSocket.php
+
+		-
+			message: '#^Parameter \#2 \$load of method Exodus4D\\Pathfinder\\Lib\\Socket\\AbstractSocket\:\:newPayload\(\) expects null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Lib/Socket/AbstractSocket.php
+
+		-
+			message: '#^Parameter \#2 \$onRejected of method React\\Promise\\PromiseInterface\<mixed\>\:\:then\(\) expects \(callable\(Throwable\)\: \(React\\Promise\\PromiseInterface\<void\>\|void\)\)\|null, Closure\(Exception\)\: void given\.$#'
+			identifier: argument.type
+			count: 3
+			path: app/Lib/Socket/AbstractSocket.php
+
+		-
+			message: '#^Parameter \#1 \$codepoint of function chr expects int, float given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Lib/SystemTag.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$security\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Lib/SystemTag/CountConnections.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Lib/SystemTag/CountConnections.php
+
+		-
+			message: '#^Binary operation "/" between string and int results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Lib/Util.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$CACHE\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined property Base\:\:\$DB\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$active\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined static property static\(Exodus4D\\Pathfinder\\Model\\AbstractModel\)\:\:\$tableData\.$#'
+			identifier: staticProperty.notFound
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to property \$_id on an unknown class Model\\AbstractModel\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Call to function is_object\(\) with null will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Cannot call method castAll\(\) on array\<static\(Exodus4D\\Pathfinder\\Model\\AbstractModel\)\>\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:relFind\(\) should return DB\\CortexCollection\|null but returns array\<DB\\Cortex\>\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$relModel CortexCollection\|bool\)\: Unexpected token "\$relModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$relModel self\|bool\)\: Unexpected token "\$relModel", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Parameter \#1 \$filter of method DB\\Cortex\:\:find\(\) expects array\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Parameter \#2 \$preserve_keys of function array_reverse expects bool, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between array\|false and 0 will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Model/AbstractModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AbstractMapTrackingModel\:\:\$createdCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AbstractMapTrackingModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AbstractMapTrackingModel\:\:\$updatedCharacterId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/AbstractMapTrackingModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Lib\\Logging\\LogInterface\:\:setCharacter\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/AbstractMapTrackingModel.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$characterModel \(Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Model/Pathfinder/AbstractMapTrackingModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cursor\:\:schema\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/AbstractPathfinderModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AbstractSystemApiBasicModel\:\:\$lastUpdatedValue\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AbstractSystemApiBasicModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AbstractSystemApiBasicModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AbstractSystemApiBasicModel.php
+
+		-
+			message: '#^Call to function is_array\(\) with array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/Model/Pathfinder/ActivityLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceMapModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceMapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$allianceCharacters\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$mapAlliances\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Variable \$alliance in PHPDoc tag @var does not match assigned variable \$loaded\.$#'
+			identifier: varTag.differentVariable
+			count: 1
+			path: app/Model/Pathfinder/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterAuthenticationModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterAuthenticationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipMass\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipTypeId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipTypeName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$stationId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$stationName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$structureId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$structureName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$structureTypeId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$structureTypeName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$systemName\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Call to function is_object\(\) with Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 3
+			path: app/Model/Pathfinder/CharacterLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterMapModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterMapModel.php
+
+		-
+			message: '#^Access to an undefined property \$this\(Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\)\:\:\$esiAccessToken\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property \$this\(Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\)\:\:\$esiAccessTokenExpires\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 13
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$allianceId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$authStatus\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$banned\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$characterAuthentications\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$characterLog\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$characterMaps\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$cloneLocationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$cloneLocationType\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$esiScopes\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$kicked\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$lastLogin\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$logLocation\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$ownerHash\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$roleId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$selectLocation\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$userCharacter\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Anonymous function has an unused use \$mapId\.$#'
+			identifier: closure.unusedUse
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 6
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:webSocket\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:setData\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getShipData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasAccess\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Call to an undefined static method DB\\Cortex\:\:toArray\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Expression in empty\(\) is not falsy\.$#'
+			identifier: empty.expr
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:getLogPrevSystem\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\|null but returns DB\\Cortex\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:getMap\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\|null but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$characterLog CharacterLogModel\)\: Unexpected token "\$characterLog", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$map MapModel\)\: Unexpected token "\$map", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$stationModel Universe\\StationModel\)\: Unexpected token "\$stationModel", expected type at offset 44 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$structureModel Universe\\StructureModel\)\: Unexpected token "\$structureModel", expected type at offset 44 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$typeModel Universe\\TypeModel\)\: Unexpected token "\$typeModel", expected type at offset 44 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$active\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$characterName\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$created\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$record\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipMass\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipTypeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipTypeName\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionLogModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$connectionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipMass\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipTypeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterLogModel\:\:\$shipTypeName\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$characterName\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipMass\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipTypeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel\:\:\$shipTypeName\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$connectionLog\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$created\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$eolUpdated\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$scope\.$#'
+			identifier: property.notFound
+			count: 7
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$signatures\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$source\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$target\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$type\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:getNewLog\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionLogModel but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$log ConnectionLogModel\)\: Unexpected token "\$log", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/ConnectionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationMapModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationMapModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$structureId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$rightId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$roleId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$corporationCharacters\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$corporationRights\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$isNPC\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$mapCorporations\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$shared\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$tempCorporationRight CorporationRightModel\)\: Unexpected token "\$tempCorporationRight", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationRightModel\:\:\$rightId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationRightModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationRightModel\:\:\$roleId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CorporationRightModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$expr\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$handler\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$history\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$isPaused\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$lastExecEnd\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$lastExecMemPeak\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$lastExecStart\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$lastExecState\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CronModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Variable \$status in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Model/Pathfinder/CronModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$allianceId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$source\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$tag\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$target\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\AllianceModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 10
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$created\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$createdCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$deleteEolConnections\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$deleteExpiredConnections\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$discordUsername\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$discordWebHookURLHistory\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$discordWebHookURLRally\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$icon\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$logActivity\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$logHistory\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$mapAlliances\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$mapCharacters\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$mapCorporations\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$nextBookmarks\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$persistentAliases\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$persistentSignatures\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$scopeId\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$slackChannelHistory\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$slackChannelRally\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$slackIcon\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$slackUsername\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$slackWebHookURL\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$trackAbyssalJumps\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 12
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$updatedCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$posX\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$posY\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:filterRel\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Lib\\Logging\\LogInterface\:\:logActivity\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:setType\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$characterModel \(Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getConnectionById\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\|null but returns DB\\Cortex\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getNewConnection\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getNewSystem\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getSystemByCCPId\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\|null but returns DB\\Cortex\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getSystemById\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\|null but returns DB\\Cortex\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$mapModel MapModel\)\: Unexpected token "\$mapModel", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 84 on line 3$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Parameter \#1 \$string of function base64_encode expects string, int\<min, \-1\>\|int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Parameter \#1 \$targetSystem of static method Exodus4D\\Pathfinder\\Lib\\SystemTag\:\:generateFor\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Parameter \#2 \$sourceSystem of static method Exodus4D\\Pathfinder\\Lib\\SystemTag\:\:generateFor\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Return type \(Closure\) of method Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:getLogFormatter\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getLogFormatter\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Variable \$connectionIds in empty\(\) always exists and is always falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Model/Pathfinder/MapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\RightModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/RightModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:\$label\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/RoleModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/RoleModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:\$style\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/RoleModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\RoleModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/RoleModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$statusId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$structureCorporations\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$structureId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type Universe\\TypeModel\)\: Unexpected token "\$type", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$class\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$label\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\:\:getAll\(\) should return DB\\CortexCollection but returns array\<Exodus4D\\Pathfinder\\Model\\Pathfinder\\StructureStatusModel\>\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/StructureStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\MapModel\:\:\$persistentSignatures\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$alias\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$connectionsSource\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$connectionsTarget\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$constellation\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$constellationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$created\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$createdCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$effect\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$factionWar\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$locked\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$mapId\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$planets\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$posX\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$posY\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$rallyPoke\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$rallyUpdated\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$region\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$regionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$security\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$shattered\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$signatures\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$sovereignty\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$statics\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$stations\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$statusId\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$tag\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$trueSec\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:\$updatedCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Call to an undefined static method DB\\Cortex\:\:getStatusById\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Call to function is_object\(\) with Exodus4D\\Pathfinder\\Lib\\PriorityCacheStore will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemModel\:\:getNewSignature\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$signature SystemSignatureModel\)\: Unexpected token "\$signature", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type MapTypeModel\)\: Unexpected token "\$type", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\ConnectionModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$connectionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$connectionIdDeleteCascade\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$created\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$createdCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$groupId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$systemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$updated\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemSignatureModel\:\:\$updatedCharacterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$connection ConnectionModel\)\: Unexpected token "\$connection", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Pathfinder/SystemSignatureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemStatusModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemStatusModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemStatusModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemTypeModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemTypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\SystemTypeModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/SystemTypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserCharacterModel\:\:\$characterId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/UserCharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserCharacterModel\:\:\$userId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Pathfinder/UserCharacterModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:\$userCharacters\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:hasUserCharacter\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Pathfinder\\UserModel\:\:getSessionCharacter\(\) should return Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterModel\|null but returns Exodus4D\\Pathfinder\\Model\\AbstractModel\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$character CharacterModel\)\: Unexpected token "\$character", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$userCharacter UserCharacterModel\)\: Unexpected token "\$userCharacter", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 2
+			path: app/Model/Pathfinder/UserModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:\$x\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AbstractUniverseModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:\$y\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AbstractUniverseModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:\$z\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AbstractUniverseModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AllianceModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AllianceModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\AllianceModel\:\:\$ticker\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$faction FactionModel\)\: Unexpected token "\$faction", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AllianceModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/AllianceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\CategoryModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\CategoryModel\:\:\$groups\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\CategoryModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadTypesData\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$group GroupModel\)\: Unexpected token "\$group", expected type at offset 20 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$group GroupModel\)\: Unexpected token "\$group", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$group GroupModel\)\: Unexpected token "\$group", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/CategoryModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\ConstellationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\ConstellationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\ConstellationModel\:\:\$regionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$region RegionModel\)\: Unexpected token "\$region", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\ConstellationModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/ConstellationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\CorporationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\CorporationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$alliance AllianceModel\)\: Unexpected token "\$alliance", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$faction FactionModel\)\: Unexpected token "\$faction", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\CorporationModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/CorporationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\DogmaAttributeModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/DogmaAttributeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\DogmaAttributeModel\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/DogmaAttributeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\DogmaAttributeModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/DogmaAttributeModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/DogmaAttributeModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\DogmaAttributeModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/DogmaAttributeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/FactionModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\FactionModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/FactionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:\$contested\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:\$occupierFactionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:\$ownerFactionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:\$victoryPoints\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:\$victoryPointsThreshold\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\FactionWarSystemModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/FactionWarSystemModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$storeDogmaAttributes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\GroupModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\GroupModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\GroupModel\:\:\$types\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$category CategoryModel\)\: Unexpected token "\$category", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/GroupModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\PlanetModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\PlanetModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\PlanetModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/PlanetModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\RaceModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\RaceModel\:\:\$factionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\RaceModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$faction FactionModel\)\: Unexpected token "\$faction", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\RaceModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/RaceModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\RegionModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\RegionModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$constellation ConstellationModel\)\: Unexpected token "\$constellation", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\RegionModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/RegionModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SovereigntyMapModel\:\:\$allianceId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SovereigntyMapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SovereigntyMapModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SovereigntyMapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SovereigntyMapModel\:\:\$factionId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SovereigntyMapModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\SovereigntyMapModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/SovereigntyMapModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StarModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StarModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\StarModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/StarModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StargateModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StargateModel\:\:\$destinationSystemId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StargateModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:getById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Method Exodus4D\\Pathfinder\\Model\\Universe\\StargateModel\:\:getData\(\) should return null but returns object\{\}&stdClass\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$destinationSystem SystemModel\)\: Unexpected token "\$destinationSystem", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StargateModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$corporationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$raceId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$services\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$faction CorporationModel\)\: Unexpected token "\$faction", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$race RaceModel\)\: Unexpected token "\$race", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$system SystemModel\)\: Unexpected token "\$system", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\StationModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/StationModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StructureModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StructureModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\StructureModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$type TypeModel\)\: Unexpected token "\$type", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\StructureModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/StructureModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 7
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$constellationId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$effect\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$factionWar\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$planets\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$security\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$sovereignty\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$starId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$stargates\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$statics\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$stations\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:\$trueSec\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$alliance AllianceModel\|null\)\: Unexpected token "\$alliance", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$constellation ConstellationModel\)\: Unexpected token "\$constellation", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$corporation CorporationModel\|null\)\: Unexpected token "\$corporation", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$faction FactionModel\)\: Unexpected token "\$faction", expected type at offset 36 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$factionWar FactionWarSystemModel\)\: Unexpected token "\$factionWar", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$occupierFaction FactionModel\)\: Unexpected token "\$occupierFaction", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$ownerFaction FactionModel\)\: Unexpected token "\$ownerFaction", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$planet PlanetModel\)\: Unexpected token "\$planet", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$planet PlanetModel\)\: Unexpected token "\$planet", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$sovereignty SovereigntyMapModel\)\: Unexpected token "\$sovereignty", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$star StarModel\)\: Unexpected token "\$star", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$stargate StargateModel\)\: Unexpected token "\$stargate", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$stargate StargateModel\)\: Unexpected token "\$stargate", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$static SystemStaticModel\)\: Unexpected token "\$static", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$station StationModel\)\: Unexpected token "\$station", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$station SystemModel\)\: Unexpected token "\$station", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\SystemModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/SystemModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\SystemStaticModel\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/SystemStaticModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeAttributeModel\:\:\$attributeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeAttributeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeAttributeModel\:\:\$value\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeAttributeModel.php
+
+		-
+			message: '#^Return type \(stdClass\) of method Exodus4D\\Pathfinder\\Model\\Universe\\TypeAttributeModel\:\:getData\(\) should be compatible with return type \(null\) of method Exodus4D\\Pathfinder\\Model\\Universe\\AbstractUniverseModel\:\:getData\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Model/Universe/TypeAttributeModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$attributeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$typeId\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property DB\\Cortex\:\:\$value\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$attributes\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$dogmaAttributes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$mass\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Access to an undefined property Exodus4D\\Pathfinder\\Model\\Universe\\TypeModel\:\:\$statics\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Call to an undefined method DB\\Cortex\:\:loadById\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$dogmaAttribute DogmaAttributeModel\)\: Unexpected token "\$dogmaAttribute", expected type at offset 86 on line 3$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$group GroupModel\)\: Unexpected token "\$group", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$typeAttribute TypeAttributeModel\)\: Unexpected token "\$typeAttribute", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Model/Universe/TypeModel.php
+
+		-
+			message: '#^Parameter \#1 \$array of function end is passed by reference, so it expects variables only\.$#'
+			identifier: argument.byRef
+			count: 1
+			path: app/Model/Universe/TypeModel.php

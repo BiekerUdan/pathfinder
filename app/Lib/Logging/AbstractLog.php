@@ -498,28 +498,25 @@ abstract class AbstractLog implements LogInterface {
     }
 
     /**
-     * get __construct() parameters for SwiftMailerHandler() call
+     * get __construct() parameters for SymfonyMailerHandler() call
      * @return array
      */
     protected function getHandlerParamsMail() : array {
         $params = [];
         if( !empty($conf = $this->handlerParamsConfig['mail']) ){
-            $transport = (new \Swift_SmtpTransport())
-                ->setHost($conf->host)
-                ->setPort($conf->port)
-                ->setEncryption($conf->scheme)
-                ->setUsername($conf->username)
-                ->setPassword($conf->password)
-                ->setStreamOptions([
-                    'ssl' => [
-                        'allow_self_signed' => true,
-                        'verify_peer' => false
-                    ]
-                ]);
+            $dsn = sprintf(
+                '%s://%s:%s@%s:%d',
+                $conf->scheme,
+                urlencode($conf->username),
+                urlencode($conf->password),
+                $conf->host,
+                $conf->port
+            );
 
-            $mailer = new \Swift_Mailer($transport);
+            $transport = \Symfony\Component\Mailer\Transport::fromDsn($dsn);
+            $mailer = new \Symfony\Component\Mailer\Mailer($transport);
 
-            // callback function used instead of Swift_Message() object
+            // callback function to create email message
             // -> we want the formatted/replaced message as subject
             $messageCallback = function($content, $records) use ($conf){
                 $subject = 'No Subject';
@@ -530,25 +527,17 @@ abstract class AbstractLog implements LogInterface {
 
                 $jsonData = @json_encode($records, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
-
-                $message = (new \Swift_Message())
-                    ->setSubject($subject)
-                    ->addPart($jsonData)
-                    ->setFrom($conf->from)
-                    ->setTo($conf->to)
-                    ->setContentType('text/html')
-                    ->setCharset('utf-8')
-                    ->setMaxLineLength(1000);
+                $email = (new \Symfony\Component\Mime\Email())
+                    ->subject($subject)
+                    ->from($conf->from)
+                    ->to($conf->to)
+                    ->html($jsonData);
 
                 if($conf->addJson){
-                    $jsonAttachment = (new \Swift_Attachment())
-                        ->setFilename('data.json')
-                        ->setContentType('application/json')
-                        ->setBody($jsonData);
-                    $message->attach($jsonAttachment);
+                    $email->attach($jsonData, 'data.json', 'application/json');
                 }
 
-                return $message;
+                return $email;
             };
 
             $params[] = $mailer;

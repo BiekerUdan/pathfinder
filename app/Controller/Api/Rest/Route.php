@@ -411,6 +411,12 @@ class Route extends AbstractRestController {
      */
     private function getSystemInfoBySystemId($systemId, $option){
         $info = null;
+
+        // Check if system exists in nameArray before accessing
+        if (!isset($this->nameArray[$systemId])) {
+            return null;
+        }
+
         switch($option){
             case 'systemName':
                 $info = $this->nameArray[$systemId][0];

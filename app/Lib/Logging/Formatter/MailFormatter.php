@@ -10,18 +10,21 @@ namespace Exodus4D\Pathfinder\Lib\Logging\Formatter;
 
 use Exodus4D\Pathfinder\Lib\Config;
 use Monolog\Formatter;
+use Monolog\LogRecord;
 
 class MailFormatter implements Formatter\FormatterInterface {
 
     /**
-     * @param array $record
-     * @return mixed|string
+     * @param LogRecord $record
+     * @return string
      */
-    public function format(array $record){
+    public function format(LogRecord $record): string {
+        // Convert LogRecord to array for processing
+        $recordArray = $record->toArray();
 
         $tplDefaultData = [
-            'tplPretext' => $record['message'],
-            'tplGreeting' => \Markdown::instance()->convert(str_replace('*', '', $record['message'])),
+            'tplPretext' => $recordArray['message'],
+            'tplGreeting' => \Markdown::instance()->convert(str_replace('*', '', $recordArray['message'])),
             'message' => false,
             'tplText2' => false,
             'tplClosing' => 'Fly save!',
@@ -33,16 +36,16 @@ class MailFormatter implements Formatter\FormatterInterface {
             'appMail' => Config::getPathfinderData('email'),
         ];
 
-        $tplData = array_replace_recursive($tplDefaultData, (array)$record['context']['data']['main']);
+        $tplData = array_replace_recursive($tplDefaultData, (array)$recordArray['context']['data']['main']);
 
         return \Template::instance()->render('templates/mail/basic_inline.html', 'text/html', $tplData);
     }
 
     /**
      * @param array $records
-     * @return mixed|string
+     * @return string
      */
-    public function formatBatch(array $records){
+    public function formatBatch(array $records): string {
         $message = '';
         foreach ($records as $key => $record) {
             $message .= $this->format($record);

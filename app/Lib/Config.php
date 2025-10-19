@@ -598,7 +598,7 @@ class Config extends \Prefab {
      * @param \DateTime|null $dateCheck
      * @return bool
      */
-    static function inDownTimeRange(\DateTime $dateCheck = null) : bool {
+    static function inDownTimeRange(?\DateTime $dateCheck = null) : bool {
         $inRange = false;
         // default daily downtime 00:00am
         $downTimeParts = [0, 0];

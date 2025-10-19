@@ -51,7 +51,7 @@ class Monolog extends \Prefab {
      */
     const HANDLER = [
         'stream'        => 'Monolog\Handler\StreamHandler',
-        'mail'          => 'Monolog\Handler\SwiftMailerHandler',
+        'mail'          => 'Monolog\Handler\SymfonyMailerHandler',
         'socket'        => 'Exodus4D\Pathfinder\Lib\Logging\Handler\SocketHandler',
         'slackMap'      => 'Exodus4D\Pathfinder\Lib\Logging\Handler\SlackMapWebhookHandler',
         'slackRally'    => 'Exodus4D\Pathfinder\Lib\Logging\Handler\SlackRallyWebhookHandler',

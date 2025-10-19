@@ -195,7 +195,8 @@ class Setup extends Controller {
         // enables automatic column fix
         $fixColumns = false;
 
-        switch($params['action']){
+        $action = $params['action'] ?? null;
+        switch($action){
             case 'createDB':
                 $this->createDB($f3, $params['db']);
                 break;
@@ -961,7 +962,7 @@ class Setup extends Controller {
             exec('npm -v', $npmOut, $npmStatus);
 
             $normalizeVersion = function($version): string {
-                return preg_replace("/[^0-9\.\s]/", '', (string)$version);
+                return preg_replace("/[^0-9.\s]/", '', (string)$version);
             };
 
             $systemConf = [
@@ -1472,7 +1473,11 @@ class Setup extends Controller {
             $match = array_filter($results, function($k) use ($param) : bool {
                 return strtolower($k['Variable_name']) == $param;
             });
-            return !empty($match) ? end(reset($match)) : 'unknown';
+            if (!empty($match)) {
+                $firstMatch = reset($match);
+                return end($firstMatch);
+            }
+            return 'unknown';
         };
 
         $checkValue = function($requiredValue, $value) : bool {
@@ -1522,10 +1527,9 @@ class Setup extends Controller {
                 // try create new db
                 $db = $f3->DB->createDB($dbAlias);
                 if(is_null($db)){
-                    foreach($f3->DB->getErrors($dbAlias, 5) as $error){
-                        // ... no further error handling here -> check log files
-                        //$error->getMessage()
-                    }
+                    // Errors are logged automatically, no further error handling here -> check log files
+                    $errors = $f3->DB->getErrors($dbAlias, 5);
+                    unset($errors); // Suppress unused variable warning
                 }
             }
         }

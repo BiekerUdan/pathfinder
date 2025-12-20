@@ -4,8 +4,8 @@
 namespace Exodus4D\Pathfinder\Lib\Api;
 
 use Exodus4D\Pathfinder\Lib\Config;
-use Exodus4D\ESI\Client\ApiInterface;
-use Exodus4D\ESI\Client\EveScout\EveScout as Client;
+use Exodus4D\Pathfinder\ESI\Client\ApiInterface;
+use Exodus4D\Pathfinder\ESI\Client\EveScout\EveScout as Client;
 
 /**
  * Class EveScoutClient

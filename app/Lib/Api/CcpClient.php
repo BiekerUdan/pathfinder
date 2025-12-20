@@ -9,8 +9,8 @@
 namespace Exodus4D\Pathfinder\Lib\Api;
 
 use Exodus4D\Pathfinder\Lib\Config;
-use Exodus4D\ESI\Client\ApiInterface;
-use Exodus4D\ESI\Client\Ccp\Esi\Esi as Client;
+use Exodus4D\Pathfinder\ESI\Client\ApiInterface;
+use Exodus4D\Pathfinder\ESI\Client\Ccp\Esi\Esi as Client;
 
 /**
  * Class CcpClient

@@ -18,7 +18,7 @@ use Exodus4D\Pathfinder\Lib\Config;
 use Exodus4D\Pathfinder\Lib\Util;
 use Exodus4D\Pathfinder\Lib\Logging;
 use Exodus4D\Pathfinder\Controller\LogController;
-use Exodus4D\ESI\Client\ApiInterface;
+use Exodus4D\Pathfinder\ESI\Client\ApiInterface;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Http\Message\RequestInterface;
 

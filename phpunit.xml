@@ -15,6 +15,9 @@
         <testsuite name="Integration Tests">
             <directory>tests/Integration</directory>
         </testsuite>
+        <testsuite name="ESI Tests">
+            <directory>tests/ESI</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>

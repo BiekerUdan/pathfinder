@@ -1861,16 +1861,196 @@ parameters:
 			path: app/Db/Sql/Mysql/Session.php
 
 		-
-			message: '#^Call to an undefined method Exodus4D\\ESI\\Client\\ApiInterface\:\:setLogRequestHeaders\(\)\.$#'
-			identifier: method.notFound
+			message: '#^Call to method buffer\(\) on an unknown class lib\\logging\\LogInterface\.$#'
+			identifier: class.notFound
 			count: 1
-			path: app/Lib/Api/AbstractClient.php
+			path: app/ESI/Client/AbstractApi.php
 
 		-
-			message: '#^Call to an undefined method Exodus4D\\ESI\\Client\\ApiInterface\:\:setLogResponseHeaders\(\)\.$#'
-			identifier: method.notFound
+			message: '#^Call to method setData\(\) on an unknown class lib\\logging\\LogInterface\.$#'
+			identifier: class.notFound
 			count: 1
-			path: app/Lib/Api/AbstractClient.php
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Call to method setMessage\(\) on an unknown class lib\\logging\\LogInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Call to method setTag\(\) on an unknown class lib\\logging\\LogInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^PHPDoc tag @return with type \(callable\)\|null is not subtype of native type Closure\|null\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$log contains unknown class lib\\logging\\LogInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Parameter \#2 \$json of static method Exodus4D\\Pathfinder\\ESI\\Lib\\WebClient\:\:newErrorResponse\(\) expects bool, string given\.$#'
+			identifier: argument.type
+			count: 6
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Property Exodus4D\\Pathfinder\\ESI\\Client\\AbstractApi\:\:\$logRequestHeaders \(false\) does not accept bool\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Property Exodus4D\\Pathfinder\\ESI\\Client\\AbstractApi\:\:\$logResponseHeaders \(false\) does not accept bool\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/ESI/Client/AbstractApi.php
+
+		-
+			message: '#^Instanceof between Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface and Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: app/ESI/Client/Ccp/Esi/Esi.php
+
+		-
+			message: '#^Parameter \#2 \$content of method Exodus4D\\Pathfinder\\ESI\\Client\\Ccp\\Esi\\Esi\:\:getRequestOptions\(\) expects null, array given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/ESI/Client/Ccp/Esi/Esi.php
+
+		-
+			message: '#^Parameter \#2 \$content of method Exodus4D\\Pathfinder\\ESI\\Client\\Ccp\\Esi\\Esi\:\:getRequestOptions\(\) expects null, stdClass given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/ESI/Client/Ccp/Esi/Esi.php
+
+		-
+			message: '#^Variable \$content in empty\(\) always exists and is always falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/ESI/Client/Ccp/Esi/Esi.php
+
+		-
+			message: '#^Instanceof between Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface and Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: app/ESI/Client/Ccp/Sso/Sso.php
+
+		-
+			message: '#^Instanceof between Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface and Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: app/ESI/Client/EveScout/EveScout.php
+
+		-
+			message: '#^Instanceof between Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface and Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: app/ESI/Client/GitHub/GitHub.php
+
+		-
+			message: '#^Parameter &\$endpoint by\-ref type of method Exodus4D\\Pathfinder\\ESI\\Config\\AbstractConfig\:\:stripVersion\(\) expects string, string\|null given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: app/ESI/Config/AbstractConfig.php
+
+		-
+			message: '#^Call to function is_null\(\) with int will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/ESI/Lib/Middleware/Cache/CacheEntry.php
+
+		-
+			message: '#^Parameter \#2 \$value of method Psr\\Http\\Message\\MessageInterface\:\:withHeader\(\) expects array\<string\>\|string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/ESI/Lib/Middleware/Cache/CacheEntry.php
+
+		-
+			message: '#^Call to function is_null\(\) with GuzzleHttp\\Client will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCacheMiddleware.php
+
+		-
+			message: '#^Property Exodus4D\\Pathfinder\\ESI\\Lib\\Middleware\\GuzzleCacheMiddleware\:\:\$waitingRevalidate \(array\<GuzzleHttp\\Promise\\Promise\>\) does not accept array\<GuzzleHttp\\Promise\\PromiseInterface\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCacheMiddleware.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCacheMiddleware.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCacheMiddleware.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCcpErrorLimitMiddleware.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 2
+			path: app/ESI/Lib/Middleware/GuzzleCcpLogMiddleware.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleCcpLogMiddleware.php
+
+		-
+			message: '#^Anonymous function has an unused use \$request\.$#'
+			identifier: closure.unusedUse
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleJsonMiddleware.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleJsonMiddleware.php
+
+		-
+			message: '#^Parameter \#1 \$string of function substr expects string, int given\.$#'
+			identifier: argument.type
+			count: 4
+			path: app/ESI/Lib/Middleware/GuzzleLogMiddleware.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleLogMiddleware.php
+
+		-
+			message: '#^Parameter \#2 \$replace of function str_replace expects array\<string\>\|string, array\<int, int\|string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/ESI/Lib/Middleware/GuzzleRetryMiddleware.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: app/ESI/Lib/Stream/JsonStream.php
 
 		-
 			message: '#^Access to an undefined property Base\:\:\$DB\.$#'

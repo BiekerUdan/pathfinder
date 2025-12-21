@@ -13,9 +13,7 @@ class Connection extends AbstractIterator {
     protected static $map = [
         'id'                                => 'id',
         'signature_type'                    => 'type',
-        'in_system_name'                    => 'name',
         'completed'                         => ['state' => 'name'],
-        'updated_at'                        => ['state' => 'updated'],
 
         //Thera || Turnur
         'out_system_id'                     => ['source' => 'id'],

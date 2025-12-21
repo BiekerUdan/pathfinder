@@ -1915,12 +1915,6 @@ parameters:
 			path: app/ESI/Client/AbstractApi.php
 
 		-
-			message: '#^Access to undefined constant Exodus4D\\Pathfinder\\ESI\\Client\\ApiInterface\:\:DEFAULT_BATCH_CONCURRENCY\.$#'
-			identifier: classConstant.notFound
-			count: 1
-			path: app/ESI/Client/ApiInterface.php
-
-		-
 			message: '#^Instanceof between Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface and Exodus4D\\Pathfinder\\ESI\\Config\\ConfigInterface will always evaluate to true\.$#'
 			identifier: instanceof.alwaysTrue
 			count: 1
@@ -2053,40 +2047,10 @@ parameters:
 			path: app/ESI/Lib/Middleware/GuzzleRetryMiddleware.php
 
 		-
-			message: '#^Property Exodus4D\\Pathfinder\\ESI\\Lib\\Stream\\JsonStream\:\:\$stream is unused\.$#'
-			identifier: property.unused
-			count: 1
-			path: app/ESI/Lib/Stream/JsonStream.php
-
-		-
 			message: '#^Unreachable statement \- code above always terminates\.$#'
 			identifier: deadCode.unreachable
 			count: 1
 			path: app/ESI/Lib/Stream/JsonStream.php
-
-		-
-			message: '#^Array has 2 duplicate keys with value ''in_system_name'' \(''in_system_name'', ''in_system_name''\)\.$#'
-			identifier: array.duplicateKey
-			count: 1
-			path: app/ESI/Mapper/EveScout/Connection.php
-
-		-
-			message: '#^Array has 2 duplicate keys with value ''updated_at'' \(''updated_at'', ''updated_at''\)\.$#'
-			identifier: array.duplicateKey
-			count: 1
-			path: app/ESI/Mapper/EveScout/Connection.php
-
-		-
-			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\ESI\\Client\\ApiInterface\:\:setLogRequestHeaders\(\)\.$#'
-			identifier: method.notFound
-			count: 1
-			path: app/Lib/Api/AbstractClient.php
-
-		-
-			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\ESI\\Client\\ApiInterface\:\:setLogResponseHeaders\(\)\.$#'
-			identifier: method.notFound
-			count: 1
-			path: app/Lib/Api/AbstractClient.php
 
 		-
 			message: '#^Access to an undefined property Base\:\:\$DB\.$#'

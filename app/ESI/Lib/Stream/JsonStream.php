@@ -22,7 +22,9 @@ class JsonStream implements JsonStreamInterface {
     }
 
     /**
+     * Required by StreamDecoratorTrait
      * @var StreamInterface
+     * @phpstan-ignore-next-line property.unused
      */
     private StreamInterface $stream;
 

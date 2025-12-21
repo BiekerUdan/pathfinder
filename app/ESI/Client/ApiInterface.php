@@ -11,6 +11,11 @@ namespace Exodus4D\Pathfinder\ESI\Client;
 interface ApiInterface {
 
     /**
+     * Default batch concurrency for parallel requests
+     */
+    public const DEFAULT_BATCH_CONCURRENCY = 5;
+
+    /**
      * ApiInterface constructor.
      * @param string $url
      */
@@ -134,6 +139,18 @@ interface ApiInterface {
      * @return mixed
      */
     public function setLogAllStatus(bool $logAllStatus);
+
+    /**
+     * @param bool $logRequestHeaders
+     * @return mixed
+     */
+    public function setLogRequestHeaders(bool $logRequestHeaders);
+
+    /**
+     * @param bool $logResponseHeaders
+     * @return mixed
+     */
+    public function setLogResponseHeaders(bool $logResponseHeaders);
 
     /**
      * @param string $logFile

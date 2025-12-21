@@ -11,6 +11,7 @@ namespace Exodus4D\Pathfinder\ESI\Lib\Middleware;
 use Exodus4D\Pathfinder\ESI\Lib\Stream\JsonStream;
 use Exodus4D\Pathfinder\ESI\Lib\Stream\JsonStreamInterface;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Promise\Create;
 use GuzzleHttp\TransferStats;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -233,7 +234,7 @@ class GuzzleLogMiddleware {
                 $this->log($options, $request, $response, $reason);
             }
 
-            return \GuzzleHttp\Promise\rejection_for($reason);
+            return Create::rejectionFor($reason);
         };
     }
 

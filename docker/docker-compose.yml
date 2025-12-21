@@ -53,7 +53,7 @@ services:
 
   # Pathfinder Application with PHP-FPM
   pathfinder:
-    image: pathfinder-fpm:alpine
+    image: biekerudan/pathfinder:latest
     container_name: pathfinder_app
     restart: unless-stopped
     depends_on:

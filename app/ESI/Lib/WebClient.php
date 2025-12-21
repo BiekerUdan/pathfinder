@@ -22,6 +22,7 @@ use GuzzleHttp\Pool;
 use GuzzleHttp\Promise;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Utils as Psr7Utils;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -161,7 +162,7 @@ class WebClient {
         $body = (object)[];
         $body->error = implode(', ', $message);
 
-        $bodyStream = \GuzzleHttp\Psr7\stream_for(\GuzzleHttp\json_encode($body));
+        $bodyStream = Psr7Utils::streamFor(\GuzzleHttp\Utils::jsonEncode($body));
 
         if($json){
             // use JsonStream for as body

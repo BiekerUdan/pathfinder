@@ -25,7 +25,7 @@ abstract class AbstractGuzzleMiddleware {
      * @param array $options
      */
     public function __invoke(RequestInterface $request, array $options){
-        if(is_callable($options['get_cache_pool'])){
+        if(isset($options['get_cache_pool']) && is_callable($options['get_cache_pool'])){
             $this->getCachePool = $options['get_cache_pool'];
         }
     }

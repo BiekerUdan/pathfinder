@@ -13,6 +13,7 @@ use Exodus4D\Pathfinder\ESI\Lib\Middleware\Cache\CacheEntry;
 use Exodus4D\Pathfinder\ESI\Lib\Middleware\Cache\Storage\CacheStorageInterface;
 use Exodus4D\Pathfinder\ESI\Lib\Middleware\Cache\Storage\VolatileRuntimeStorage;
 use Exodus4D\Pathfinder\ESI\Lib\Middleware\GuzzleCacheMiddleware;
+use GuzzleHttp\Psr7\Header;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -51,7 +52,7 @@ class PrivateCacheStrategy implements CacheStrategyInterface {
      * PrivateCacheStrategy constructor.
      * @param CacheStorageInterface|null $cache
      */
-    public function __construct(CacheStorageInterface $cache = null){
+    public function __construct(?CacheStorageInterface $cache = null){
         // if no CacheStorageInterface (e.g. Psr6CacheStorage) defined
         // -> use default VolatileRuntimeStorage (store data in temp array)
         $this->storage = !is_null($cache) ? $cache : new VolatileRuntimeStorage();
@@ -76,7 +77,7 @@ class PrivateCacheStrategy implements CacheStrategyInterface {
         }
 
         if($response->hasHeader('Vary')){
-            $varyHeader = \GuzzleHttp\Psr7\parse_header($response->getHeader('Vary'));
+            $varyHeader = Header::parse($response->getHeader('Vary'));
             if(GuzzleCacheMiddleware::inArrayDeep($varyHeader, '*')){
                 // This will never match with a request
                 return null;
@@ -84,7 +85,7 @@ class PrivateCacheStrategy implements CacheStrategyInterface {
         }
 
         if($response->hasHeader('Cache-Control')){
-            $cacheControlHeader = \GuzzleHttp\Psr7\parse_header($response->getHeader('Cache-Control'));
+            $cacheControlHeader = Header::parse($response->getHeader('Cache-Control'));
 
             if(GuzzleCacheMiddleware::inArrayDeep($cacheControlHeader, 'no-store')){
                 // No store allowed (maybe some sensitives data...)
@@ -146,14 +147,14 @@ class PrivateCacheStrategy implements CacheStrategyInterface {
          */
         $maxAge = null;
         if($request->hasHeader('Cache-Control')){
-            $reqCacheControl = \GuzzleHttp\Psr7\parse_header($request->getHeader('Cache-Control'));
+            $reqCacheControl = Header::parse($request->getHeader('Cache-Control'));
             if(GuzzleCacheMiddleware::inArrayDeep($reqCacheControl, 'no-cache')){
                 // Can't return cache
                 return null;
             }
             $maxAge = (int)GuzzleCacheMiddleware::arrayKeyDeep($reqCacheControl, 'max-age') ? : null;
         }elseif($request->hasHeader('Pragma')){
-            $pragma = \GuzzleHttp\Psr7\parse_header($request->getHeader('Pragma'));
+            $pragma = Header::parse($request->getHeader('Pragma'));
             if(GuzzleCacheMiddleware::inArrayDeep($pragma, 'no-cache')){
                 // Can't return cache
                 return null;
@@ -198,7 +199,7 @@ class PrivateCacheStrategy implements CacheStrategyInterface {
      */
     public function cache(RequestInterface $request, ResponseInterface $response) : bool {
         if($request->hasHeader('Cache-Control')){
-            $reqCacheControl = \GuzzleHttp\Psr7\parse_header($request->getHeader('Cache-Control'));
+            $reqCacheControl = Header::parse($request->getHeader('Cache-Control'));
             if(GuzzleCacheMiddleware::inArrayDeep($reqCacheControl, 'no-store')){
                 // No caching allowed
                 return false;

@@ -10,6 +10,7 @@ namespace Exodus4D\Pathfinder\ESI\Lib\Stream;
 
 
 use GuzzleHttp\Psr7\StreamDecoratorTrait;
+use Psr\Http\Message\StreamInterface;
 
 class JsonStream implements JsonStreamInterface {
 
@@ -21,6 +22,11 @@ class JsonStream implements JsonStreamInterface {
     }
 
     /**
+     * @var StreamInterface
+     */
+    private StreamInterface $stream;
+
+    /**
      * @return mixed|string|null
      */
     public function getContents(){
@@ -29,7 +35,7 @@ class JsonStream implements JsonStreamInterface {
         if($contents === ''){
             return null;
         }
-        $decodedContents = \GuzzleHttp\json_decode($contents);
+        $decodedContents = \GuzzleHttp\Utils::jsonDecode($contents);
 
         if(json_last_error() !== JSON_ERROR_NONE){
             throw new \RuntimeException('Error trying to decode response: ' . json_last_error_msg());

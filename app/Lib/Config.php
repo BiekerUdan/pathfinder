@@ -188,6 +188,59 @@ class Config extends \Prefab {
         $f3->set(TcpSocket::SOCKET_NAME, function(array $options = ['timeout' => 1]) : SocketInterface {
             return AbstractSocket::factory(TcpSocket::class, self::getSocketUri(), $options);
         });
+
+        // explicit session cookie policy ---------------------------------------------------------------------------
+        // -> runs before any session use in normal flow (sessions start lazily)
+        self::hardenSessionCookies($f3);
+    }
+
+    /**
+     * pin an explicit session cookie policy and strict session handling
+     * -> HttpOnly + SameSite=Lax always; Secure whenever the request is TLS
+     *    (including behind a TLS-terminating ingress via X-Forwarded-Proto)
+     * -> strict mode rejects uninitialized session IDs (fixation resistance)
+     * -> session IDs must still be regenerated after authentication (see login)
+     * @param \Base $f3
+     */
+    public static function hardenSessionCookies(\Base $f3) : void {
+        $isHttps = self::isHttpsRequest();
+
+        // F3 session/remember-me cookie params (applied before session start)
+        $f3->set('JAR.path', '/');
+        $f3->set('JAR.httponly', true);
+        $f3->set('JAR.samesite', 'Lax');
+        $f3->set('JAR.secure', $isHttps);
+
+        if(session_status() !== PHP_SESSION_ACTIVE){
+            // belt and braces for anything bypassing the JAR layer
+            @ini_set('session.use_strict_mode', '1');
+            @ini_set('session.use_only_cookies', '1');
+            @ini_set('session.use_trans_sid', '0');
+            @ini_set('session.cookie_httponly', '1');
+            @ini_set('session.cookie_samesite', 'Lax');
+            if($isHttps){
+                @ini_set('session.cookie_secure', '1');
+            }
+        }
+    }
+
+    /**
+     * whether the current request is TLS, incl. TLS-terminating proxies
+     * @return bool
+     */
+    public static function isHttpsRequest() : bool {
+        if(!empty($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off'){
+            return true;
+        }
+        if(isset($_SERVER['SERVER_PORT']) && (int)$_SERVER['SERVER_PORT'] === 443){
+            return true;
+        }
+        foreach(['HTTP_X_FORWARDED_PROTO', 'HTTP_X_FORWARDED_SSL'] as $header){
+            if(!empty($_SERVER[$header]) && stripos((string)$_SERVER[$header], 'https') !== false){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

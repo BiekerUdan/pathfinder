@@ -181,6 +181,21 @@ class Controller {
     }
 
     /**
+     * regenerate the session ID and destroy the old server-side session
+     * -> call after any authentication (SSO, remember-me) or privilege change
+     * -> fixation resistance: a session ID fixed before login becomes useless
+     * -> no-op when no usable session exists (e.g. CLI/test processes)
+     */
+    protected static function regenerateSessionId() : void {
+        if(
+            session_status() === PHP_SESSION_ACTIVE &&
+            !headers_sent()
+        ){
+            session_regenerate_id(true);
+        }
+    }
+
+    /**
      * init new Resource handler
      * @param \Base $f3
      * @return Resource
@@ -306,6 +321,35 @@ class Controller {
     }
 
     /**
+     * rotate a persistent (remember-me) credential after successful use
+     * -> the presented selector/validator is consumed (single-use) and a
+     *    fresh credential is issued; expired rows for the character are pruned
+     * -> a stolen cookie cannot be replayed after the legitimate login
+     * @param Pathfinder\CharacterAuthenticationModel $characterAuth validated, hydrated row
+     * @throws \Exception
+     */
+    protected function rotateLoginCookie(Pathfinder\CharacterAuthenticationModel $characterAuth) : void {
+        // NB: get() lazy-loads the relation; rel() would return dry
+        $character = $characterAuth->get('characterId');
+
+        // prune expired persistent credentials for this character (bound outstanding tokens)
+        $timezone = $this->getF3()->get('getTimeZone')();
+        $now = (new \DateTime('now', $timezone))->format('Y-m-d H:i:s');
+        $expired = Pathfinder\AbstractPathfinderModel::getNew('CharacterAuthenticationModel');
+        $expired->erase([
+            'expires < ? AND characterId = ?',
+            $now,
+            (int)$character->_id
+        ]);
+
+        // consume the presented credential (also clears the presented cookie)
+        $characterAuth->erase();
+
+        // issue a replacement credential + cookie
+        $this->setLoginCookie($character);
+    }
+
+    /**
      * get characters from given cookie data
      * -> validate cookie data
      * -> validate characters
@@ -349,18 +393,24 @@ class Controller {
                             hash_equals($characterAuth->token, hash('sha256', $data[1]))
                         ){
                             // cookie information is valid
+                            // -> rotate the persistent credential NOW (single-use):
+                            //    a stolen cookie cannot be replayed after the legitimate use
+                            $characterId = (int)$characterAuth->get('characterId', true);
+                            // NB: get() lazy-loads the relation; rel() would return dry
+                            $character = $characterAuth->get('characterId');
+                            $this->rotateLoginCookie($characterAuth);
+
                             // -> try to update character information from ESI
                             // e.g. Corp has changed, this also ensures valid "access_token"
                             /**
                              * @var $character Pathfinder\CharacterModel
                              */
-                            $updateStatus = $characterAuth->characterId->updateFromESI();
+                            $updateStatus = $character->updateFromESI();
 
                             if( empty($updateStatus) ){
                                 // make sure character data is up2date!
                                 // -> this is not the case if e.g. userCharacters was removed "ownerHash" changed...
-                                $character = $characterAuth->rel('characterId');
-                                $character->getById( $characterAuth->get('characterId', true) );
+                                $character->getById($characterId);
 
                                 // check ESI scopes
                                 $scopeHash = Util::getHashFromScopes($character->esiScopes);

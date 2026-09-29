@@ -194,7 +194,7 @@ class Sso extends Api\User{
 
                     $verificationCharacterData = $this->verifyCharacterData($accessData->accessToken);
 
-                    if( !empty($verificationCharacterData) ){
+                    if( !empty($verificationCharacterData->characterId) ){
 
                         // check if login is restricted to a characterID
 
@@ -346,8 +346,8 @@ class Sso extends Api\User{
             // Authentication Code is set -> request new "accessToken"
             $accessData = $this->verifyAuthorizationCode($authCode);
         }else{
-            // Unable to get Token -> trigger error
-            self::getSSOLogger()->write(sprintf(self::ERROR_ACCESS_TOKEN, $authCode));
+            // Unable to get Token -> trigger error (never log the raw auth code)
+            self::getSSOLogger()->write(sprintf(self::ERROR_ACCESS_TOKEN, 'authorization_code=[redacted]'));
         }
 
         return $accessData;
@@ -420,10 +420,27 @@ class Sso extends Api\User{
                 $accessData->refreshToken =  $authCodeRequestData['refreshToken'];
             }
         }else{
-            self::getSSOLogger()->write(sprintf(self::ERROR_ACCESS_TOKEN, print_r($requestParams, true)));
+            // never log raw request params: they carry the auth `code` or `refresh_token`
+            self::getSSOLogger()->write(sprintf(self::ERROR_ACCESS_TOKEN, print_r(self::redactSsoParams($requestParams), true)));
         }
 
         return $accessData;
+    }
+
+    /**
+     * redact OAuth secrets from SSO token-request params before logging
+     * -> `code` (authorization code) and `refresh_token` become [redacted];
+     *    non-sensitive fields (e.g. grant_type) are kept for diagnostics
+     * @param array $requestParams
+     * @return array
+     */
+    public static function redactSsoParams(array $requestParams) : array {
+        foreach(['code', 'refresh_token', 'refreshToken', 'access_token', 'accessToken'] as $secret){
+            if(array_key_exists($secret, $requestParams)){
+                $requestParams[$secret] = '[redacted]';
+            }
+        }
+        return $requestParams;
     }
 
     /**
@@ -434,10 +451,19 @@ class Sso extends Api\User{
      * @return object
      */
     public function verifyCharacterData(string $accessToken) : object {
-        $characterData = $this->verifyJwtAccessToken($accessToken);
+        $characterData = (object) [];
 
-        if( !empty($characterData) ){
-            $characterData->characterId = (int)explode(':',$characterData->sub)[2];
+        try{
+            $characterData = $this->verifyJwtAccessToken($accessToken);
+        }catch(\Throwable $e){
+            // rejected token (bad signature, issuer, audience, subject, timing)
+            // -> login error path, never a 500 with token details
+            self::getSSOLogger()->write(sprintf(self::ERROR_VERIFY_CHARACTER, __METHOD__));
+            return (object) [];
+        }
+
+        if( !empty((array)$characterData) ){
+            $characterData->characterId = (int)explode(':', $characterData->sub)[2];
         }else{
             self::getSSOLogger()->write(sprintf(self::ERROR_VERIFY_CHARACTER, __METHOD__));
         }
@@ -449,23 +475,92 @@ class Sso extends Api\User{
      * verify JWT by comparing to CCP public JWK
      * -> get Ccp JWKs
      * -> decode accessToken using JWKs
-     * -> Verify token claim is correct
+     * -> Verify token claims (fail closed: any problem rejects the token)
      * @param string $accessToken
      * @return object
+     * @throws \Exodus4D\Pathfinder\Exception\ValidationException
     */
     public function verifyJwtAccessToken(string $accessToken) : object {
         $ccpJwks = $this->getCcpJwkData();
         // set $leeway in seconds to 10, since sometimes there can be verification errors due server clock skew resulting
         // in tokens that look like they were issued 1 second in the future.
         JWT::$leeway = 10;
-        // get decoded JWT using ccp supplied JWK
-        // Note: JWK::parseKeySet() returns Key objects with algorithms already set, so no need for 3rd parameter
-        $decodedJwt = JWT::decode($accessToken, JWK::parseKeySet($ccpJwks));
-        // check if issuer matches correct ccp supplied claim values
-        if (strpos($decodedJwt->iss, $this->getSsoJwkClaim()) !== true) {
-            self::getSSOLogger()->write(sprintf(self::ERROR_TOKEN_VERIFICATION, __METHOD__));
+        try{
+            // get decoded JWT using ccp supplied JWK
+            // Note: JWK::parseKeySet() returns Key objects with algorithms already set, so no need for 3rd parameter
+            $decodedJwt = JWT::decode($accessToken, JWK::parseKeySet($ccpJwks));
+        }catch(\Throwable $e){
+            // signature, format, key, or timing failure -> reject, never accept
+            self::getSSOLogger()->write(sprintf(self::ERROR_TOKEN_VERIFICATION . ' (%s: %s)', __METHOD__, get_class($e)));
+            throw new \Exodus4D\Pathfinder\Exception\ValidationException(self::ERROR_TOKEN_VERIFICATION);
         }
+        // enforce issuer, audience, subject, and required claims
+        self::assertJwtClaimsValid($decodedJwt, (string)self::getEnvironmentData('CCP_SSO_CLIENT_ID'), self::getSsoAcceptedIssuers());
         return $decodedJwt;
+    }
+
+    /**
+     * issuers accepted for CCP JWT access tokens
+     * -> derived from the configured CCP_SSO_JWK_CLAIM host, both bare and
+     *    https-scheme forms (CCP issues `https://login.eveonline.com`)
+     * @return string[]
+     */
+    public static function getSsoAcceptedIssuers() : array {
+        $claim = trim((string)self::getEnvironmentData('CCP_SSO_JWK_CLAIM'));
+        $issuers = [];
+        if($claim !== ''){
+            $issuers[] = $claim;
+            $withScheme = preg_match('#^https?://#i', $claim) ? $claim : 'https://' . $claim;
+            if(!in_array($withScheme, $issuers, true)){
+                $issuers[] = $withScheme;
+            }
+        }
+        return $issuers;
+    }
+
+    /**
+     * enforce required JWT claims for a CCP access token (fail closed)
+     * - `iss` must exactly match an accepted issuer
+     * - `aud` (string or array) must contain the SSO client ID
+     * - `sub` must have the `CHARACTER:EVE:<id>` subject format
+     * - `exp` must be present (timing itself is enforced by the JWT library)
+     * @param object $decodedJwt
+     * @param string $clientId
+     * @param string[] $acceptedIssuers
+     * @throws \Exodus4D\Pathfinder\Exception\ValidationException
+     */
+    public static function assertJwtClaimsValid(object $decodedJwt, string $clientId, array $acceptedIssuers) : void {
+        $fail = function(string $detail) : void {
+            self::getSSOLogger()->write(sprintf(self::ERROR_TOKEN_VERIFICATION . ' (%s)', $detail));
+            throw new \Exodus4D\Pathfinder\Exception\ValidationException(self::ERROR_TOKEN_VERIFICATION);
+        };
+
+        if(empty($acceptedIssuers)){
+            $fail('no accepted issuers configured');
+        }
+
+        $iss = $decodedJwt->iss ?? null;
+        if(!is_string($iss) || !in_array($iss, $acceptedIssuers, true)){
+            $fail('invalid iss');
+        }
+
+        if($clientId === ''){
+            $fail('no SSO client ID configured');
+        }
+        $aud = $decodedJwt->aud ?? null;
+        $audiences = is_array($aud) ? $aud : [$aud];
+        if(!in_array($clientId, $audiences, true)){
+            $fail('invalid aud');
+        }
+
+        $sub = $decodedJwt->sub ?? null;
+        if(!is_string($sub) || !preg_match('/^CHARACTER:EVE:[0-9]+$/', $sub)){
+            $fail('invalid sub');
+        }
+
+        if(!isset($decodedJwt->exp) || (!is_int($decodedJwt->exp) && !ctype_digit((string)$decodedJwt->exp))){
+            $fail('missing exp');
+        }
     }
 
     /**

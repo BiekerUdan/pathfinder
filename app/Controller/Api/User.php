@@ -82,6 +82,10 @@ class User extends Controller\Controller{
 
             $this->getF3()->set(self::SESSION_KEY_CHARACTERS, $sessionCharacters);
 
+            // new authentication (SSO or remember-me) -> new session ID
+            // -> fixation resistance; old session data is destroyed server-side
+            self::regenerateSessionId();
+
             $character->updateCloneData();
             $character->updateRoleData();
 
@@ -284,6 +288,10 @@ class User extends Controller\Controller{
                             // save/update user model
                             // this will fail if model validation fails!
                             $user->save();
+
+                            // sensitive account data changed -> revoke persistent
+                            // (remember-me) credentials; other devices must log in again
+                            $activeCharacter->deleteAuthentications();
 
                         }else{
                             // captcha was send but not valid -> return error

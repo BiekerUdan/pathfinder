@@ -1386,7 +1386,7 @@ class CharacterModel extends AbstractPathfinderModel {
     /**
      * delete authentications data
      */
-    protected function deleteAuthentications(){
+    public function deleteAuthentications(){
         if(is_object($this->characterAuthentications)){
             foreach($this->characterAuthentications as $characterAuthentication){
                 /**
@@ -1414,6 +1414,9 @@ class CharacterModel extends AbstractPathfinderModel {
                 // no active characters logged in -> log user out
                 $this->getF3()->clear(User::SESSION_KEY_USER);
                 $this->getF3()->clear(User::SESSION_KEY_CHARACTERS);
+                // destroy the server-side session and expire the session cookie
+                // -> a logged-out session ID must not remain valid (fixation/logout hygiene)
+                $this->getF3()->clear('SESSION');
             }else{
                 // update remaining active characters
                 $this->getF3()->set(User::SESSION_KEY_CHARACTERS, $sessionCharacterData);

@@ -1453,6 +1453,12 @@ parameters:
 			path: app/Controller/Controller.php
 
 		-
+			message: '#^Parameter \#1 \$characterAuth of method Exodus4D\\Pathfinder\\Controller\\Controller\:\:rotateLoginCookie\(\) expects Exodus4D\\Pathfinder\\Model\\Pathfinder\\CharacterAuthenticationModel, Exodus4D\\Pathfinder\\Model\\AbstractModel\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controller/Controller.php
+
+		-
 			message: '#^Call to an undefined method Base\:\:ccpClient\(\)\.$#'
 			identifier: method.notFound
 			count: 1

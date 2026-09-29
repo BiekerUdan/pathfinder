@@ -773,13 +773,26 @@ class Controller {
             }
 
             // check if error is a PDO Exception ----------------------------------------------------------------------
-            if(strpos(strtolower( $f3->get('ERROR.text') ), 'duplicate') !== false){
-                preg_match_all('/\'([^\']+)\'/', $f3->get('ERROR.text'), $matches, PREG_SET_ORDER);
+            if(strpos(strtolower( (string)$f3->get('ERROR.text') ), 'duplicate') !== false){
+                preg_match_all('/\'([^\']+)\'/', (string)$f3->get('ERROR.text'), $matches, PREG_SET_ORDER);
 
                 if(count($matches) === 2){
                     $error->field = $matches[1][1];
                     $error->text = 'Value "' . $matches[0][1] . '" already exists';
                 }
+            }
+
+            // redact production 5xx details: never leak raw SQL, file paths, or exception text -------------
+            // -> 4xx messages stay specific (client errors); 5xx becomes generic unless DEBUG is enabled
+            if(
+                isset($error->code) && (int)$error->code >= 500 &&
+                $f3->get('DEBUG') < 1
+            ){
+                $isDuplicateNotice = isset($error->field) && $error->text !== ($errorData['text'] ?? null);
+                if(!$isDuplicateNotice){
+                    $error->text = 'Internal Server Error';
+                }
+                unset($error->trace);
             }
 
             // set response status ------------------------------------------------------------------------------------

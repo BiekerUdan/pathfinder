@@ -106,7 +106,7 @@ class Sql extends \DB\SQL {
     /**
      * @see https://fatfreeframework.com/3.6/sql#exec
      * @param array|string $cmds
-     * @param null $args
+     * @param array|string|null $args
      * @param int $ttl
      * @param bool $log (we use false as default parameter)
      * @param bool $stamp

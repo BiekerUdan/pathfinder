@@ -84,11 +84,23 @@ class Connection extends AbstractRestController {
                     !is_null($source) &&
                     !is_null($target)
                 ){
-                    /**
-                     * @var $connection Pathfinder\ConnectionModel
-                     */
-                    $connection = Pathfinder\AbstractPathfinderModel::getNew('ConnectionModel');
-                    $connection->getById((int)$requestData['id']);
+                    $connectionId = (int)($requestData['id'] ?? 0);
+                    if($connectionId > 0){
+                        // resolve existing connections ONLY through the already-authorized map
+                        // -> prevents moving/modifying a connection from another map (IDOR)
+                        $connection = $map->getConnectionById($connectionId);
+                        if(is_null($connection)){
+                            // unknown ID or connection belongs to a different map
+                            // -> do not create/move anything; empty result keeps 200 envelope
+                            $this->out($connectionData);
+                            return;
+                        }
+                    }else{
+                        /**
+                         * @var Pathfinder\ConnectionModel $connection
+                         */
+                        $connection = Pathfinder\AbstractPathfinderModel::getNew('ConnectionModel');
+                    }
 
                     $connection->mapId = $map;
                     $connection->source = $source;

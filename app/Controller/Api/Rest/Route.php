@@ -78,6 +78,45 @@ class Route extends AbstractRestController {
     ];
 
     /**
+     * filter request-controlled connection `type` values against the canonical whitelist
+     * -> invalid values (SQL metachars, regexp metachars, unknown types) are rejected
+     * @param mixed $excludeTypes
+     * @return string[] validated type values only
+     */
+    public static function filterRouteExcludeTypes($excludeTypes) : array {
+        $validated = [];
+        $whitelist = Pathfinder\ConnectionModel::getConnectionTypeWhitelist();
+        foreach((array)$excludeTypes as $type){
+            if(
+                \is_string($type) &&
+                \in_array($type, $whitelist, true)
+            ){
+                $validated[] = $type;
+            }
+        }
+        return \array_values(\array_unique($validated));
+    }
+
+    /**
+     * build a safe MySQL REGEXP pattern from validated connection types
+     * -> caller must pass values through filterRouteExcludeTypes() first;
+     *    this method re-validates and returns null when nothing valid remains
+     * @param mixed $excludeTypes
+     * @return string|null
+     */
+    public static function buildExcludeTypesRegexp($excludeTypes) : ?string {
+        $validated = self::filterRouteExcludeTypes($excludeTypes);
+        if(empty($validated)){
+            return null;
+        }
+        // whitelist values are [a-z_] only; preg_quote is defense-in-depth
+        $quoted = \array_map(function(string $type) : string {
+            return \preg_quote($type, '/');
+        }, $validated);
+        return \implode('|', $quoted);
+    }
+
+    /**
      * reset all jump data
      */
     protected function resetJumpData(){
@@ -163,7 +202,7 @@ class Route extends AbstractRestController {
                 }
 
                 if(!empty($filterData['excludeTypes'])){
-                    $excludeTypes = $filterData['excludeTypes'];
+                    $excludeTypes = self::filterRouteExcludeTypes($filterData['excludeTypes']);
                 }
             }
 
@@ -174,10 +213,16 @@ class Route extends AbstractRestController {
             // search connections -------------------------------------------------------------------------------------
 
             if( !empty($includeScopes) ){
+                $queryParams = [];
                 $whereQuery .= " `connection`.`scope` IN ('" . implode("', '", $includeScopes) . "') AND ";
 
                 if( !empty($excludeTypes) ){
-                    $whereQuery .= " `connection`.`type` NOT REGEXP '" . implode("|", $excludeTypes) . "' AND ";
+                    $excludeRegexp = self::buildExcludeTypesRegexp($excludeTypes);
+                    if(!is_null($excludeRegexp)){
+                        // bound parameter: validated whitelist values only, never raw request input
+                        $whereQuery .= ' `connection`.`type` NOT REGEXP :excludeTypes AND ';
+                        $queryParams[':excludeTypes'] = $excludeRegexp;
+                    }
                 }
 
                 if( !empty($includeTypes) ){
@@ -213,7 +258,7 @@ class Route extends AbstractRestController {
                               `connection`.`mapId` " . $whereMapIdsQuery . "
                               ";
 
-                $rows = $this->getDB()->exec($query,  null, $this->dynamicJumpDataCacheTime);
+                $rows = $this->getDB()->exec($query, $queryParams, $this->dynamicJumpDataCacheTime);
 
                 if(count($rows) > 0){
                     $jumpData = [];
@@ -239,7 +284,7 @@ class Route extends AbstractRestController {
                             ];
                         }
 
-                        if( !in_array($row[$systemTargetKey], (array)$jumpData[$row[$systemSourceKey]]['jumpNodes']) ){
+                        if( !in_array($row[$systemTargetKey], (array)($jumpData[$row[$systemSourceKey]]['jumpNodes'] ?? [])) ){
                             $jumpData[$row[$systemSourceKey]]['jumpNodes'][] = (int)$row[$systemTargetKey];
                         }
                     };
@@ -363,10 +408,10 @@ class Route extends AbstractRestController {
             }
 
             // fill "jumpArray" data ----------------------------------------------------------------------------------
-            if( !is_array($this->jumpArray[$systemId]) ){
+            if( !is_array($this->jumpArray[$systemId] ?? null) ){
                 $this->jumpArray[$systemId] = [];
             }
-            $this->jumpArray[$systemId] = array_merge((array)$row['jumpNodes'], $this->jumpArray[$systemId]);
+            $this->jumpArray[$systemId] = array_merge((array)($row['jumpNodes'] ?? []), $this->jumpArray[$systemId]);
 
             // add systemName to end (if not already there)
             if(end($this->jumpArray[$systemId]) != $systemName){

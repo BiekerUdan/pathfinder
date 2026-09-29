@@ -120,6 +120,15 @@ class ConnectionModel extends AbstractMapTrackingModel {
     ];
 
     /**
+     * canonical whitelist of allowed connection `type` values
+     * -> single source of truth for server-side validation (e.g. route filters)
+     * @return string[]
+     */
+    public static function getConnectionTypeWhitelist() : array {
+        return self::$connectionTypeWhitelist;
+    }
+
+    /**
      * get connection data
      * @param bool $addSignatureData
      * @param bool $addLogData

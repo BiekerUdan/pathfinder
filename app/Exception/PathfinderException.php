@@ -42,6 +42,7 @@ class PathfinderException extends \Exception {
 
     /**
      * get error object
+     * -> production (DEBUG < 1) 5xx responses never carry raw exception messages
      * @return \stdClass
      */
     public function getError() : \stdClass {
@@ -49,9 +50,13 @@ class PathfinderException extends \Exception {
         $error->type = 'error';
         $error->code = $this->getResponseCode();
         $error->status = Config::getHttpStatusByCode($this->getResponseCode());
-        $error->text = $this->getMessage();
         if(\Base::instance()->get('DEBUG') >= 1){
+            $error->text = $this->getMessage();
             $error->trace = preg_split('/\R/', $this->getTraceAsString()); // no $this->>getTrace() here -> to much data
+        }elseif((int)$error->code >= 500){
+            $error->text = 'Internal Server Error';
+        }else{
+            $error->text = $this->getMessage();
         }
         return $error;
     }

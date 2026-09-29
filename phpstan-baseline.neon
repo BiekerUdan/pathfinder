@@ -447,7 +447,7 @@ parameters:
 		-
 			message: '#^Call to an undefined method Exodus4D\\Pathfinder\\Model\\AbstractModel\:\:getConnectionById\(\)\.$#'
 			identifier: method.notFound
-			count: 1
+			count: 2
 			path: app/Controller/Api/Rest/Connection.php
 
 		-

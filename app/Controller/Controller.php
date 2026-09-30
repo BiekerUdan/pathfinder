@@ -1027,13 +1027,15 @@ class Controller {
             $serverData->requiredVersion = 'unknown';
             $serverData->phpInterfaceType = php_sapi_name();
 
-            if(strpos(strtolower($_SERVER['SERVER_SOFTWARE']), 'nginx' ) !== false){
+            $serverSoftware = strtolower((string)($_SERVER['SERVER_SOFTWARE'] ?? ''));
+
+            if(strpos($serverSoftware, 'nginx' ) !== false){
                 // Nginx server
-                $serverSoftwareArgs = explode('/', strtolower( $_SERVER['SERVER_SOFTWARE']) );
+                $serverSoftwareArgs = explode('/', $serverSoftware );
                 $serverData->type = reset($serverSoftwareArgs);
                 $serverData->version = end($serverSoftwareArgs);
                 $serverData->requiredVersion = $f3->get('REQUIREMENTS.SERVER.NGINX.VERSION');
-            }elseif(strpos(strtolower($_SERVER['SERVER_SOFTWARE']), 'apache' ) !== false){
+            }elseif(strpos($serverSoftware, 'apache' ) !== false){
                 // Apache server
                 $serverData->type = 'apache';
                 $serverData->requiredVersion = $f3->get('REQUIREMENTS.SERVER.APACHE.VERSION');

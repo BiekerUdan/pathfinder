@@ -17,6 +17,28 @@ use Exodus4D\Pathfinder\Model;
 class Setup extends Controller\Controller {
 
     /**
+     * gate every setup API action independently of the /setup HTML route
+     * -> wildcard routing (/api/@controller/@action) would otherwise expose
+     *    these privileged methods with no further check
+     * -> mutations are POST-only; the HTML setup UI already POSTs
+     * @param \Base $f3
+     * @param array $params
+     * @return bool
+     */
+    function beforeroute(\Base $f3, $params) : bool {
+        if(!Controller\Setup::requireSetupAccess($f3)){
+            return false;
+        }
+
+        if($f3->get('VERB') !== 'POST'){
+            $f3->error(405);
+            return false;
+        }
+
+        return parent::beforeroute($f3, $params);
+    }
+
+    /**
      * get HTML table <tr>´s for all cronjobs
      * @param \Base $f3
      */

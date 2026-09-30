@@ -24,6 +24,89 @@ use Exodus4D\Pathfinder\Data\Filesystem\Search;
 class Setup extends Controller {
 
     /**
+     * request header carrying the setup token (preferred transport)
+     */
+    const SETUP_TOKEN_HEADER = 'X-Setup-Token';
+
+    /**
+     * request param carrying the setup token (fallback for browser/curl use)
+     */
+    const SETUP_TOKEN_PARAM = 'setup_token';
+
+    /**
+     * whether the setup surfaces are enabled for this instance
+     * -> default OFF; enable per instance via environment, e.g.
+     *    PF-ENV-SETUP_ENABLED=1 (ConfigMap / container env)
+     * @return bool
+     */
+    public static function isSetupEnabled() : bool {
+        return filter_var(Config::getEnvironmentData('SETUP_ENABLED'), FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
+     * configured per-instance setup token (deployment secret)
+     * -> provide via environment, e.g. PF-ENV-SETUP_TOKEN=<random> (K8s Secret)
+     * -> empty means "no token configured" and always denies (fail closed)
+     * @return string
+     */
+    public static function getSetupToken() : string {
+        return (string)Config::getEnvironmentData('SETUP_TOKEN');
+    }
+
+    /**
+     * decide setup access without side effects (testable core)
+     * -> 'ok': enabled and valid token presented
+     * -> 'disabled': setup not enabled (caller should answer 404)
+     * -> 'denied': enabled but no/invalid token (caller should answer 403)
+     * @param \Base $f3
+     * @return string
+     */
+    public static function checkSetupAccess(\Base $f3) : string {
+        if(!self::isSetupEnabled()){
+            return 'disabled';
+        }
+
+        $expected = self::getSetupToken();
+        if($expected === ''){
+            // enabled without a token must never grant access
+            return 'denied';
+        }
+
+        $provided = null;
+        $headers = self::getRequestHeaders();
+        if(isset($headers[self::SETUP_TOKEN_HEADER])){
+            $provided = $headers[self::SETUP_TOKEN_HEADER];
+        }
+        if(!is_string($provided) || $provided === ''){
+            $provided = $f3->get('POST.' . self::SETUP_TOKEN_PARAM);
+        }
+        if(!is_string($provided) || $provided === ''){
+            $provided = $f3->get('GET.' . self::SETUP_TOKEN_PARAM);
+        }
+
+        if(!is_string($provided) || $provided === ''){
+            return 'denied';
+        }
+
+        return hash_equals($expected, $provided) ? 'ok' : 'denied';
+    }
+
+    /**
+     * enforce setup access for a route; maps the decision to HTTP status
+     * @param \Base $f3
+     * @return bool true when access granted
+     */
+    public static function requireSetupAccess(\Base $f3) : bool {
+        $status = self::checkSetupAccess($f3);
+        if($status === 'ok'){
+            return true;
+        }
+        // disabled surfaces hide (404); enabled ones reject (403)
+        $f3->error($status === 'disabled' ? 404 : 403);
+        return false;
+    }
+
+    /**
      * required environment variables
      * @var array
      */
@@ -148,6 +231,11 @@ class Setup extends Controller {
      * @return bool
      */
     function beforeroute(\Base $f3, $params): bool {
+        // setup is destructive/privileged: gate every action incl. ?action= dispatch
+        if(!self::requireSetupAccess($f3)){
+            return false;
+        }
+
         $f3->set('tplResource', $this->initResource($f3));
 
         // page title
@@ -1384,7 +1472,14 @@ class Setup extends Controller {
                 $dbStatusCheckCount++;
 
                 foreach($f3->DB->getErrors($dbAlias, 10) as $dbException){
-                    $dbErrors[] = $dbException->getMessage();
+                    // never render raw DB exception text (credentials/hosts/paths)
+                    // -> details go to the server log for the operator
+                    self::getLogger('SETUP')->write(sprintf(
+                        'setup DB %s error: %s',
+                        $dbAlias,
+                        $dbException->getMessage()
+                    ));
+                    $dbErrors[] = 'Database connection failed (see server log for details)';
                 }
 
                 // try to connect without! DB (-> offer option to create them)

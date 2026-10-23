@@ -1,7 +1,11 @@
 # Multi-stage Dockerfile for Pathfinder with PHP-FPM
+# PHP base pinned to 8.4.27 (2026-10-21 security release fixing
+# CVE-2026-109618 + CVE-2026-109619 unauthenticated RCE). Do NOT float
+# this tag: rebuilds must provably contain the patched PHP. Bump
+# deliberately on the next PHP security release (Dependabot docker watches).
 
 # Stage 1: Build stage
-FROM php:8.4-fpm-alpine AS builder
+FROM php:8.4.27-fpm-alpine AS builder
 
 # Install system dependencies
 RUN apk add --no-cache \
@@ -49,7 +53,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist
 
 # Stage 2: Runtime stage
-FROM php:8.4-fpm-alpine
+FROM php:8.4.27-fpm-alpine
 
 # Install build dependencies and runtime libraries
 RUN apk add --no-cache --virtual .build-deps \
@@ -110,6 +114,10 @@ RUN { \
     echo 'error_reporting=E_ALL & ~E_WARNING & ~E_NOTICE & ~E_DEPRECATED'; \
     echo 'display_errors=Off'; \
     echo 'log_errors=On'; \
+    echo '; CVE-2026-115560 mitigation (2026-10-23, no fixed release yet):'; \
+    echo '; disable session upload progress until the next PHP release.'; \
+    echo '; Pathfinder does not use upload progress; safe to disable.'; \
+    echo 'session.upload_progress.enabled=0'; \
 } > /usr/local/etc/php/conf.d/custom.ini
 
 # Create app user first (Alpine uses addgroup/adduser)

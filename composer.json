@@ -57,7 +57,7 @@
     "guzzlehttp/guzzle": "^7.0",
     "caseyamcl/guzzle_retry_middleware": "^2.13",
     "spiral/roadrunner-worker": "^3.0",
-    "spiral/roadrunner-http": "^3.0",
+    "spiral/roadrunner-http": "^4.2",
     "nyholm/psr7": "^1.8",
     "guzzlehttp/promises": "^2.0",
     "guzzlehttp/psr7": "^2.0"

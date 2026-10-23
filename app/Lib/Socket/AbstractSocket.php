@@ -96,6 +96,13 @@ abstract class AbstractSocket implements SocketInterface {
         $deferred = new Promise\Deferred();
         $payload = $this->newPayload($task, $load);
 
+        // authenticate the command envelope when a secret is configured;
+        // without one the receiver accepts unsigned payloads (upgrade path,
+        // warning logged receiver-side) - production must set the secret
+        if(!is_null(CommandAuth::getSecret())){
+            $payload['auth'] = CommandAuth::sign($task, $load);
+        }
+
         $this->connect()
             ->then(
                 function(Socket\ConnectionInterface $connection) use ($payload, $deferred): Promise\PromiseInterface {
@@ -133,10 +140,10 @@ abstract class AbstractSocket implements SocketInterface {
             ->otherwise(
                 // final exception handler for rejected promises -> convert to payload array
                 // -> No socket related Exceptions should be thrown down the chain
-                function(\Exception $e){
-                    return Promise\reject(
-                        $this->newPayload('error', $e->getMessage())
-                    );
+                // (react/promise v3 reject() requires Throwable, so resolve with
+                // the error envelope instead; fire-and-forget callers ignore it)
+                function(\Throwable $e){
+                    return $this->newPayload('error', $e->getMessage());
                 });
     }
 

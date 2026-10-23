@@ -110,6 +110,9 @@ class Controller {
             if(!$f3->exists('tplCharacterId')){
                 $f3->set('tplCharacterId', null);
             }
+            if(!$f3->exists('tplCounter')){
+                $f3->set('tplCounter', $this->counter());
+            }
             if(!$f3->exists('tplJsView')){
                 $f3->set('tplJsView', '');
             }
@@ -863,6 +866,24 @@ class Controller {
                 // recursively clear existing output buffers
                 while(ob_get_level()){
                     ob_end_clean();
+                }
+
+                // error pages can render before/instead of beforeroute()
+                // (e.g. setup gate rejections) -> ensure layout vars exist
+                if(!$f3->exists('tplResource')){
+                    $f3->set('tplResource', $this->initResource($f3));
+                }
+                if(!$f3->exists('tplCounter')){
+                    $f3->set('tplCounter', $this->counter());
+                }
+                if(!$f3->exists('tplBodyClass')){
+                    $f3->set('tplBodyClass', '');
+                }
+                if(!$f3->exists('tplCharacterId')){
+                    $f3->set('tplCharacterId', null);
+                }
+                if(!$f3->exists('tplJsView')){
+                    $f3->set('tplJsView', '');
                 }
 
                 $f3->set('tplPageTitle', 'ERROR - ' . $error->code);

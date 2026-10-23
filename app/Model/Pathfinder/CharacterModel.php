@@ -108,7 +108,9 @@ class CharacterModel extends AbstractPathfinderModel {
             'index' => true
         ],
         'esiRefreshToken' => [
-            'type' => Schema::DT_VARCHAR256
+            // TEXT: encrypted values (nonce + MAC + base64 + version prefix)
+            // exceed the old VARCHAR256 budget
+            'type' => Schema::DT_TEXT
         ],
         'esiScopes' => [
             'type' => self::DT_JSON
@@ -519,6 +521,45 @@ class CharacterModel extends AbstractPathfinderModel {
     }
 
     /**
+     * encrypt ESI access token before persistence
+     * -> transparent for readers (see get_esiAccessToken); DB holds ciphertext
+     * @param mixed $token plaintext token (or already-encrypted / empty)
+     * @return mixed value to store
+     */
+    public function set_esiAccessToken($token){
+        return \Exodus4D\Pathfinder\Lib\Crypto\TokenCrypto::encrypt((string)$token);
+    }
+
+    /**
+     * decrypt ESI access token on read
+     * -> legacy plaintext rows read through unchanged (lazy migration);
+     *    undecryptable values become '' so the refresh/re-login path heals
+     * @param mixed $stored raw DB value
+     * @return string
+     */
+    public function get_esiAccessToken($stored){
+        return \Exodus4D\Pathfinder\Lib\Crypto\TokenCrypto::decrypt($stored) ?? '';
+    }
+
+    /**
+     * encrypt ESI refresh token before persistence
+     * @param mixed $token
+     * @return mixed value to store
+     */
+    public function set_esiRefreshToken($token){
+        return \Exodus4D\Pathfinder\Lib\Crypto\TokenCrypto::encrypt((string)$token);
+    }
+
+    /**
+     * decrypt ESI refresh token on read
+     * @param mixed $stored raw DB value
+     * @return string
+     */
+    public function get_esiRefreshToken($stored){
+        return \Exodus4D\Pathfinder\Lib\Crypto\TokenCrypto::decrypt($stored) ?? '';
+    }
+
+    /**
      * get ESI API "access_token" from OAuth
      * @return bool|string
      */
@@ -570,9 +611,13 @@ class CharacterModel extends AbstractPathfinderModel {
             $ssoController = new Sso();
             $accessData =  $ssoController->refreshAccessToken($this->esiRefreshToken);
 
-            if(isset($accessData->accessToken, $accessData->esiAccessTokenExpires, $accessData->refreshToken)){
-                $this->esiAccessToken = $accessData->accessToken;
-                $this->esiAccessTokenExpires = $accessData->esiAccessTokenExpires;
+            if(isset($accessData->accessToken, $accessData->esiAccessTokenExpires)){
+                // provider may or may not rotate the refresh token alongside
+                $this->applyRefreshedTokens(
+                    $accessData->accessToken,
+                    $accessData->esiAccessTokenExpires,
+                    $accessData->refreshToken ?? null
+                );
                 $this->save();
 
                 $accessToken = $this->esiAccessToken;
@@ -580,6 +625,30 @@ class CharacterModel extends AbstractPathfinderModel {
         }
 
         return $accessToken;
+    }
+
+    /**
+     * apply tokens from an access-token refresh response
+     * -> access token + expiry are always replaced
+     * -> a rotated refresh token is persisted; when the provider omits one
+     *    (no rotation) the stored refresh token is preserved
+     * -> caller is responsible for save(); kept separate for testability
+     * @param string $accessToken
+     * @param string $expires
+     * @param string|null $refreshToken
+     */
+    public function applyRefreshedTokens(string $accessToken, string $expires, ?string $refreshToken = null) : void {
+        // explicit set()/get() so the encrypt-on-write/decrypt-on-read field
+        // hooks run (magic access would work too, but is opaque to analysis)
+        $this->set('esiAccessToken', $accessToken);
+        $this->set('esiAccessTokenExpires', $expires);
+        if(!empty($refreshToken)){
+            $this->set('esiRefreshToken', $refreshToken);
+        }else{
+            // no rotation: rewrite the stored value through the setter so a
+            // legacy plaintext row converges to encrypted form on next refresh
+            $this->set('esiRefreshToken', $this->get('esiRefreshToken'));
+        }
     }
 
     /**
@@ -1416,7 +1485,11 @@ class CharacterModel extends AbstractPathfinderModel {
                 $this->getF3()->clear(User::SESSION_KEY_CHARACTERS);
                 // destroy the server-side session and expire the session cookie
                 // -> a logged-out session ID must not remain valid (fixation/logout hygiene)
-                $this->getF3()->clear('SESSION');
+                // -> skip when no session can exist (headers already sent, e.g. CLI)
+                //    to avoid session_start() warnings after output
+                if(session_status() === PHP_SESSION_ACTIVE || !headers_sent()){
+                    $this->getF3()->clear('SESSION');
+                }
             }else{
                 // update remaining active characters
                 $this->getF3()->set(User::SESSION_KEY_CHARACTERS, $sessionCharacterData);

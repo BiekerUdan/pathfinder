@@ -42,9 +42,20 @@ services:
   websocket:
     image: pathfinder-websocket:php8.4
     container_name: pathfinder_websocket
-    ports:
-      - "8020:8020"  # WebSocket port for browser connections
-      - "5555:5555"  # TCP port for internal server communication
+    # NOTE: no host port mappings on purpose. Browser traffic reaches the
+    # websocket via nginx (/ws/ proxy over the internal network) and PHP
+    # reaches the TCP command channel via pathfinder_network. Publishing
+    # 5555 (or 8020) to the host would expose the unauthenticated internal
+    # command channel. --tcpHost=0.0.0.0 is required here because compose
+    # runs each service in its own container (own loopback); the k8s pod
+    # co-locates containers (shared localhost) and binds 127.0.0.1 instead.
+    expose:
+      - "8020"  # browser WebSocket (via nginx proxy, internal only)
+      - "5555"  # internal TCP command channel (same pod/network only)
+    environment:
+      # shared command-channel secret (must match PHP side WS_COMMAND_SECRET).
+      # empty default = warn + accept unsigned (dev only); set for anything real.
+      WS_COMMAND_SECRET: ${WS_COMMAND_SECRET:-}
     restart: unless-stopped
     # Optional: Override default settings via environment or command
     command: ["php", "cmd.php", "--wsHost=0.0.0.0", "--wsPort=8020", "--tcpHost=0.0.0.0", "--tcpPort=5555", "--debug=2"]

@@ -21,6 +21,7 @@ class Batch3SetupTest extends TestCase
     private $savedHalt;
     private $savedQuiet;
     private $savedOnError;
+    private static $savedLoggable;
 
     public static function setUpBeforeClass(): void
     {
@@ -34,6 +35,18 @@ class Batch3SetupTest extends TestCase
         self::$f3->config(__DIR__ . '/../../app/config.ini', true);
         Config::instance(self::$f3);
         self::$f3->set('TESTING', true);
+        // keep F3's error() from writing to error_log during gate tests
+        // (output would mark headers as sent for later tests in the process)
+        self::$savedLoggable = self::$f3->get('LOGGABLE');
+        self::$f3->set('LOGGABLE', 'none');
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        if(self::$f3){
+            self::$f3->set('LOGGABLE', self::$savedLoggable);
+        }
+        parent::tearDownAfterClass();
     }
 
     protected function setUp(): void
@@ -62,6 +75,11 @@ class Batch3SetupTest extends TestCase
         self::$f3->clear('POST.setup_token');
         self::$f3->clear('GET.setup_token');
         unset($_SERVER['HTTP_X_SETUP_TOKEN']);
+        // beforeroute() and error() leave hive residue (template vars, ERROR)
+        // that would pollute later tests sharing this process
+        foreach (['tplResource', 'tplPageTitle', 'tplPageContent', 'tplBodyClass', 'tplNavigation', 'ERROR'] as $key) {
+            self::$f3->clear($key);
+        }
         parent::tearDown();
     }
 

@@ -43,7 +43,7 @@
     "ikkez/f3-sheet": "0.4.*",
     "xfra35/f3-cron": "1.2.*",
     "monolog/monolog": "^3.0",
-    "symfony/mailer": "^7.0",
+    "symfony/mailer": "^8.1",
     "league/html-to-markdown": "^5.0",
     "cache/redis-adapter": "^1.2",
     "cache/filesystem-adapter": "^1.2",

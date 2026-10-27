@@ -21,6 +21,11 @@
 SET @sde_db = 'eve_sde';
 SET @universe_db = 'universe';
 
+-- The SDE contains rows with primary key 0 (invCategories '#System').
+-- Without NO_AUTO_VALUE_ON_ZERO, MySQL rewrites an explicit 0 into the next
+-- auto-increment value, corrupting FK references downstream.
+SET SESSION sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
 -- ============================================================================
 -- PREPARATION
 -- ============================================================================
@@ -123,7 +128,7 @@ SELECT
     categoryName,
     COALESCE(published, 1)
 FROM ', @sde_db, '.invCategories
-WHERE published = 1 AND categoryName IS NOT NULL
+WHERE categoryName IS NOT NULL
 ON DUPLICATE KEY UPDATE
     updated = NOW(),
     name = VALUES(name),
@@ -146,7 +151,7 @@ SELECT
     COALESCE(published, 1),
     categoryID
 FROM ', @sde_db, '.invGroups
-WHERE published = 1 AND groupName IS NOT NULL
+WHERE groupName IS NOT NULL
 ON DUPLICATE KEY UPDATE
     updated = NOW(),
     name = VALUES(name),
@@ -223,7 +228,7 @@ SELECT
     iconID,
     unitID
 FROM ', @sde_db, '.dgmAttributeTypes
-WHERE published = 1 AND attributeName IS NOT NULL
+WHERE attributeName IS NOT NULL
 ON DUPLICATE KEY UPDATE
     updated = NOW(),
     name = VALUES(name),

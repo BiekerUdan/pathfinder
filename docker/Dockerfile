@@ -5,7 +5,7 @@
 # deliberately on the next PHP security release (Dependabot docker watches).
 
 # Stage 1: Build stage
-FROM php:8.4.27-fpm-alpine AS builder
+FROM php:8.5.12-fpm-alpine AS builder
 
 # Install system dependencies
 RUN apk add --no-cache \
@@ -53,7 +53,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist
 
 # Stage 2: Runtime stage
-FROM php:8.4.27-fpm-alpine
+FROM php:8.5.12-fpm-alpine
 
 # Install build dependencies and runtime libraries
 RUN apk add --no-cache --virtual .build-deps \
